@@ -9,7 +9,7 @@ const Privacy: React.FC = () => {
     <div className="bg-slate-900 min-h-screen pt-20">
       <div className="py-16 px-4 text-center">
          <div className="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-slate-700">
-            <Lock className="h-8 w-8 text-emerald-400" />
+            <Lock className="h-8 w-8 text-blue-400" />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('privacy.title')}</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -20,7 +20,7 @@ const Privacy: React.FC = () => {
       <section className="py-12 px-4 max-w-5xl mx-auto space-y-12 pb-24">
 
          {/* Intro */}
-         <div className="text-gray-300 text-lg leading-relaxed border-l-4 border-emerald-500 pl-6">
+         <div className="text-gray-300 text-lg leading-relaxed border-l-4 border-blue-500 pl-6">
             <p>
                 {t('privacy.intro')}
             </p>
@@ -60,17 +60,17 @@ const Privacy: React.FC = () => {
             </div>
             <p className="text-gray-300 mb-4">{t('privacy.section2.intro')}</p>
             <ul className="space-y-3 text-gray-400">
-                <li className="flex gap-3"><span className="text-emerald-500">•</span> {t('privacy.section2.use1')}</li>
-                <li className="flex gap-3"><span className="text-emerald-500">•</span> {t('privacy.section2.use2')}</li>
-                <li className="flex gap-3"><span className="text-emerald-500">•</span> {t('privacy.section2.use3')}</li>
-                <li className="flex gap-3"><span className="text-emerald-500">•</span> {t('privacy.section2.use4')}</li>
+                <li className="flex gap-3"><span className="text-blue-500">•</span> {t('privacy.section2.use1')}</li>
+                <li className="flex gap-3"><span className="text-blue-500">•</span> {t('privacy.section2.use2')}</li>
+                <li className="flex gap-3"><span className="text-blue-500">•</span> {t('privacy.section2.use3')}</li>
+                <li className="flex gap-3"><span className="text-blue-500">•</span> {t('privacy.section2.use4')}</li>
             </ul>
          </div>
 
          {/* Section 3: Droits */}
          <div className="glass-panel p-8 rounded-2xl border border-slate-700 bg-gradient-to-br from-slate-800 to-slate-900">
             <div className="flex items-center gap-3 mb-6">
-               <UserCheck className="h-6 w-6 text-emerald-400" />
+               <UserCheck className="h-6 w-6 text-blue-400" />
                <h2 className="text-2xl font-bold text-white">{t('privacy.section3.title')}</h2>
             </div>
             <p className="text-gray-300 mb-6">{t('privacy.section3.intro')}</p>
@@ -95,13 +95,13 @@ const Privacy: React.FC = () => {
          </div>
 
          {/* Contact DPO */}
-         <div className="text-center bg-slate-800 p-8 rounded-2xl border border-emerald-500/30">
+         <div className="text-center bg-slate-800 p-8 rounded-2xl border border-blue-500/30">
             <h2 className="text-2xl font-bold text-white mb-4">{t('privacy.dpo.title')}</h2>
             <p className="text-gray-400 mb-6">
                 {t('privacy.dpo.description')}
             </p>
-            <a href="mailto:dpo@novabank.com" className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg shadow-emerald-500/20">
-                <Mail className="h-5 w-5" /> dpo@novabank.com
+            <a href="mailto:dpo@azurbank.com" className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg shadow-blue-500/20">
+                <Mail className="h-5 w-5" /> dpo@azurbank.com
             </a>
          </div>
 

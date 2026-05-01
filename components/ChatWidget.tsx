@@ -287,7 +287,7 @@ const ChatWidget: React.FC = () => {
   // Helper to render checkmarks
   const renderStatus = (isRead: boolean) => {
     if (isRead) return <CheckCheck className="h-3.5 w-3.5 text-blue-500" />;
-    return <Check className="h-3.5 w-3.5 text-emerald-200" />;
+    return <Check className="h-3.5 w-3.5 text-blue-200" />;
   };
 
   // --- CLOSED STATE: Floating Action Button ---
@@ -295,7 +295,7 @@ const ChatWidget: React.FC = () => {
     return (
       <button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 z-[60] w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-[0_4px_20px_rgba(16,185,129,0.4)] transition-all hover:scale-110 flex items-center justify-center group animate-fade-in-up"
+        className="fixed bottom-6 right-6 z-[60] w-14 h-14 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-[0_4px_20px_rgba(16,185,129,0.4)] transition-all hover:scale-110 flex items-center justify-center group animate-fade-in-up"
         aria-label={t('chat.open')}
       >
         <MessageSquare className="h-7 w-7" />
@@ -344,7 +344,7 @@ const ChatWidget: React.FC = () => {
                 <div className="p-4 border-b border-slate-700 bg-slate-800 flex justify-between items-center">
                     <h3 className="font-bold text-white">{t('chat.discussions')}</h3>
                     <div className="flex items-center gap-2">
-                         <div className="bg-emerald-500 text-xs px-2 py-1 rounded text-white font-bold">{t('chat.admin')}</div>
+                         <div className="bg-blue-500 text-xs px-2 py-1 rounded text-white font-bold">{t('chat.admin')}</div>
                          <button onClick={toggleChat} className="md:hidden text-gray-400 hover:text-white">
                              <X className="h-5 w-5"/>
                          </button>
@@ -374,7 +374,7 @@ const ChatWidget: React.FC = () => {
                                         <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">{userUnread}</span>
                                     )}
                                 </div>
-                                <div className={`text-xs truncate ${isTyping ? 'text-emerald-400 font-bold animate-pulse' : 'text-gray-400'}`}>
+                                <div className={`text-xs truncate ${isTyping ? 'text-blue-400 font-bold animate-pulse' : 'text-gray-400'}`}>
                                     {isTyping ? t('chat.typing') : (
                                         lastMsg ? (lastMsg.senderId === currentUser.id ? t('common.you') + ': ' : '') + lastMsg.content : t('chat.noMessage')
                                     )}
@@ -398,7 +398,7 @@ const ChatWidget: React.FC = () => {
                                 <span className="text-gray-300 text-sm">{t('chat.readReceipts')}</span>
                                 <button onClick={() => updateAdminChatSettings({ showReadReceiptsToUser: !adminChatSettings.showReadReceiptsToUser })}>
                                     {adminChatSettings.showReadReceiptsToUser 
-                                        ? <ToggleRight className="h-6 w-6 text-emerald-500" /> 
+                                        ? <ToggleRight className="h-6 w-6 text-blue-500" /> 
                                         : <ToggleLeft className="h-6 w-6 text-gray-500" />}
                                 </button>
                             </div>
@@ -406,7 +406,7 @@ const ChatWidget: React.FC = () => {
                                 <span className="text-gray-300 text-sm">{t('chat.typingIndicator')}</span>
                                 <button onClick={() => updateAdminChatSettings({ showTypingToUser: !adminChatSettings.showTypingToUser })}>
                                     {adminChatSettings.showTypingToUser 
-                                        ? <ToggleRight className="h-6 w-6 text-emerald-500" /> 
+                                        ? <ToggleRight className="h-6 w-6 text-blue-500" /> 
                                         : <ToggleLeft className="h-6 w-6 text-gray-500" />}
                                 </button>
                             </div>
@@ -414,7 +414,7 @@ const ChatWidget: React.FC = () => {
                                 <span className="text-gray-300 text-sm">{t('chat.onlineStatus')}</span>
                                 <button onClick={() => updateAdminChatSettings({ showOnlineStatusToUser: !adminChatSettings.showOnlineStatusToUser })}>
                                     {adminChatSettings.showOnlineStatusToUser 
-                                        ? <ToggleRight className="h-6 w-6 text-emerald-500" /> 
+                                        ? <ToggleRight className="h-6 w-6 text-blue-500" /> 
                                         : <ToggleLeft className="h-6 w-6 text-gray-500" />}
                                 </button>
                             </div>
@@ -435,7 +435,7 @@ const ChatWidget: React.FC = () => {
                             <div>
                                 <span className="font-bold text-white block leading-none">{users.find(u => u.id === selectedUserId)?.name}</span>
                                 {typingUsers[selectedUserId] ? (
-                                    <span className="text-[10px] text-emerald-400 animate-pulse block">{t('common.typing')}</span>
+                                    <span className="text-[10px] text-blue-400 animate-pulse block">{t('common.typing')}</span>
                                 ) : onlineUsers[selectedUserId] ? (
                                     <div className="flex items-center gap-1.5">
                                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shrink-0" title={t('common.online')}></div>
@@ -490,18 +490,18 @@ const ChatWidget: React.FC = () => {
                                     <div className={`flex ${msg.senderId === currentUser.id ? 'justify-end' : 'justify-start'}`}>
                                         <div className={`max-w-[70%] rounded-xl p-3 text-sm ${
                                             msg.senderId === currentUser.id 
-                                            ? 'bg-emerald-600 text-white rounded-tr-none' 
+                                            ? 'bg-blue-600 text-white rounded-tr-none' 
                                             : 'bg-slate-700 text-gray-200 rounded-tl-none'
                                         }`}>
                                             {msg.content}
                                             <div className="flex justify-end items-center gap-1 mt-1">
-                                                <div className={`text-[10px] ${msg.senderId === currentUser.id ? 'text-emerald-200' : 'text-gray-400'}`}>
+                                                <div className={`text-[10px] ${msg.senderId === currentUser.id ? 'text-blue-200' : 'text-gray-400'}`}>
                                                     {new Date(msg.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                                                 </div>
                                                 {/* Admins always see read receipts */}
                                                 {msg.senderId === currentUser.id && (
                                                     <span className="ml-1">
-                                                        {msg.isRead ? <CheckCheck className="h-3.5 w-3.5 text-blue-300" /> : <Check className="h-3.5 w-3.5 text-emerald-200" />}
+                                                        {msg.isRead ? <CheckCheck className="h-3.5 w-3.5 text-blue-300" /> : <Check className="h-3.5 w-3.5 text-blue-200" />}
                                                     </span>
                                                 )}
                                             </div>
@@ -529,9 +529,9 @@ const ChatWidget: React.FC = () => {
                                 onChange={handleInputChange}
                                 placeholder={t('chat.writeMessage')}
                                 maxLength={messageService.MAX_MESSAGE_LENGTH}
-                                className="flex-1 bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500"
+                                className="flex-1 bg-slate-900 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
                             />
-                            <button type="submit" className="bg-emerald-500 hover:bg-emerald-600 text-white p-2 rounded-lg transition-colors">
+                            <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg transition-colors">
                                 <Send className="h-5 w-5" />
                             </button>
                         </div>
@@ -562,7 +562,7 @@ const ChatWidget: React.FC = () => {
   return (
     <div className="fixed inset-0 z-[70] md:inset-auto md:bottom-4 md:right-4 w-full h-full md:w-[350px] lg:w-[400px] md:h-[500px] bg-slate-900 border-0 md:border md:border-slate-700 md:rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up">
       {/* Header */}
-      <div className="p-4 bg-emerald-600 flex justify-between items-center shadow-lg relative z-10">
+      <div className="p-4 bg-blue-600 flex justify-between items-center shadow-lg relative z-10">
         <div className="flex items-center gap-3">
             <div className="bg-white/20 p-2 rounded-full">
                 <ShieldCheck className="h-6 w-6 text-white" />
@@ -572,17 +572,17 @@ const ChatWidget: React.FC = () => {
                 <div className="flex items-center gap-1.5 h-4">
                     {/* Show typing status only if allowed by Admin Settings */}
                     {isAdminTyping && adminChatSettings.showTypingToUser ? (
-                        <span className="text-emerald-100 text-xs font-medium animate-pulse">{t('common.typing')}</span>
+                        <span className="text-blue-100 text-xs font-medium animate-pulse">{t('common.typing')}</span>
                     ) : adminChatSettings.showOnlineStatusToUser ? (
                         <>
                             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                            <span className="text-emerald-100 text-xs">{t('common.online')}</span>
+                            <span className="text-blue-100 text-xs">{t('common.online')}</span>
                         </>
                     ) : null}
                 </div>
             </div>
         </div>
-        <button onClick={toggleChat} className="text-emerald-100 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-1.5 transition-colors">
+        <button onClick={toggleChat} className="text-blue-100 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-1.5 transition-colors">
             <X className="h-5 w-5"/>
         </button>
       </div>
@@ -592,7 +592,7 @@ const ChatWidget: React.FC = () => {
         {/* Welcome Message */}
         <div className="flex justify-start">
              <div className="flex items-end gap-2 max-w-[85%]">
-                <div className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center shrink-0 text-white text-xs font-bold shadow-lg">NB</div>
+                <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center shrink-0 text-white text-xs font-bold shadow-lg">NB</div>
                 <div className="bg-slate-700 text-gray-200 rounded-2xl rounded-bl-none p-3 text-sm shadow-md">
                    {t('chat.welcome')} {currentUser.name}, {t('chat.welcomeMessage')}
                 </div>
@@ -618,16 +618,16 @@ const ChatWidget: React.FC = () => {
                     )}
                     <div className={`flex ${msg.senderId === currentUser.id ? 'justify-end' : 'justify-start'}`}>
                         {msg.senderId !== currentUser.id && (
-                             <div className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center shrink-0 text-white text-xs font-bold shadow-lg mr-2 self-end">NB</div>
+                             <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center shrink-0 text-white text-xs font-bold shadow-lg mr-2 self-end">NB</div>
                         )}
                         <div className={`max-w-[80%] rounded-2xl p-3 text-sm shadow-md ${
                             msg.senderId === currentUser.id 
-                            ? 'bg-emerald-600 text-white rounded-br-none' 
+                            ? 'bg-blue-600 text-white rounded-br-none' 
                             : 'bg-slate-700 text-gray-200 rounded-bl-none'
                         }`}>
                             {msg.content}
                             <div className="flex justify-end items-center gap-1 mt-1">
-                                <div className={`text-[10px] ${msg.senderId === currentUser.id ? 'text-emerald-200' : 'text-gray-400'}`}>
+                                <div className={`text-[10px] ${msg.senderId === currentUser.id ? 'text-blue-200' : 'text-gray-400'}`}>
                                     {new Date(msg.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                                 </div>
                                 {/* Only show read receipt if sender is current user AND Admin allows it */}
@@ -646,7 +646,7 @@ const ChatWidget: React.FC = () => {
         {/* Admin Typing Indicator Bubble */}
         {isAdminTyping && adminChatSettings.showTypingToUser && (
              <div className="flex justify-start animate-fade-in-up">
-                 <div className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center shrink-0 text-white text-xs font-bold shadow-lg mr-2 self-end">NB</div>
+                 <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center shrink-0 text-white text-xs font-bold shadow-lg mr-2 self-end">NB</div>
                  <TypingIndicator />
              </div>
         )}
@@ -663,9 +663,9 @@ const ChatWidget: React.FC = () => {
               onChange={handleInputChange}
               placeholder={t('chat.askQuestion')}
               maxLength={messageService.MAX_MESSAGE_LENGTH}
-              className="flex-1 bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition-colors"
+              className="flex-1 bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
           />
-          <button type="submit" className="bg-emerald-500 hover:bg-emerald-600 text-white p-3 rounded-xl transition-colors shadow-lg shadow-emerald-500/20">
+          <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
               <Send className="h-5 w-5" />
           </button>
         </div>

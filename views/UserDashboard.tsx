@@ -98,19 +98,19 @@ const StockMarketWidget: React.FC = () => {
         {/* Main Charts Column */}
         <div className="lg:col-span-2 flex flex-col gap-6">
             
-            {/* Chart 1: NovaBank (Rising) */}
+            {/* Chart 1: Azur Bank (Rising) */}
             <div className="flex flex-col justify-between h-[200px] md:h-[250px] relative bg-slate-800/50 rounded-xl border border-slate-700 p-4 md:p-6 overflow-hidden">
             {/* Header Info */}
             <div className="flex justify-between items-start z-10">
                 <div>
                 <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 md:w-8 md:h-8 bg-emerald-500 rounded flex items-center justify-center font-bold text-slate-900 text-xs md:text-base shadow-lg shadow-emerald-500/20">N</div>
-                    <h3 className="text-lg md:text-2xl font-bold text-white">NovaBank Corp.</h3>
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-blue-500 rounded flex items-center justify-center font-bold text-slate-900 text-xs md:text-base shadow-lg shadow-blue-500/20">N</div>
+                    <h3 className="text-lg md:text-2xl font-bold text-white">Azur Bank Corp.</h3>
                     <span className="text-gray-400 font-mono text-xs md:text-sm">($NVB)</span>
                 </div>
                 <div className="mt-2 flex items-baseline gap-2 md:gap-4">
                     <span className="text-xl md:text-3xl font-mono font-bold text-white">{novaPrice.toFixed(2)} €</span>
-                    <span className={`flex items-center text-xs md:text-sm font-bold ${isNovaUp ? 'text-emerald-400' : 'text-red-400'}`}>
+                    <span className={`flex items-center text-xs md:text-sm font-bold ${isNovaUp ? 'text-blue-400' : 'text-red-400'}`}>
                         {isNovaUp ? <TrendingUp className="h-3 w-3 md:h-4 md:w-4 mr-1"/> : <TrendingDown className="h-3 w-3 md:h-4 md:w-4 mr-1"/>}
                         {Math.abs(novaChange).toFixed(2)} ({((novaChange / 1245.50) * 100).toFixed(2)}%)
                     </span>
@@ -118,7 +118,7 @@ const StockMarketWidget: React.FC = () => {
                 </div>
                 <div className="text-right hidden sm:block">
                   <div className="text-xs text-gray-400 uppercase tracking-widest">{translations.volume}</div>
-                  <div className="text-emerald-400 font-mono font-bold">{translations.strongBuy}</div>
+                  <div className="text-blue-400 font-mono font-bold">{translations.strongBuy}</div>
                 </div>
             </div>
 
@@ -127,12 +127,12 @@ const StockMarketWidget: React.FC = () => {
                 <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 500 200">
                 <defs>
                     <linearGradient id="chartGradientNova" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#10b981" stopOpacity="0.4" />
-                    <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#2563eb" stopOpacity="0.4" />
+                    <stop offset="100%" stopColor="#2563eb" stopOpacity="0" />
                     </linearGradient>
                 </defs>
                 <path d={getAreaPath(novaHistory, 500, 200)} fill="url(#chartGradientNova)" />
-                <path d={getGraphPath(novaHistory, 500, 200)} fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" className="drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
+                <path d={getGraphPath(novaHistory, 500, 200)} fill="none" stroke="#2563eb" strokeWidth="3" strokeLinecap="round" vectorEffect="non-scaling-stroke" className="drop-shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
                 </svg>
             </div>
             </div>
@@ -149,7 +149,7 @@ const StockMarketWidget: React.FC = () => {
                     </div>
                     <div className="mt-2 flex items-baseline gap-2 md:gap-4">
                         <span className="text-xl md:text-3xl font-mono font-bold text-gray-300">{competitorPrice.toFixed(2)} €</span>
-                        <span className={`flex items-center text-xs md:text-sm font-bold ${isCompetitorUp ? 'text-emerald-400' : 'text-red-500'}`}>
+                        <span className={`flex items-center text-xs md:text-sm font-bold ${isCompetitorUp ? 'text-blue-400' : 'text-red-500'}`}>
                             {isCompetitorUp ? <TrendingUp className="h-3 w-3 md:h-4 md:w-4 mr-1"/> : <TrendingDown className="h-3 w-3 md:h-4 md:w-4 mr-1"/>}
                             {Math.abs(competitorChange).toFixed(2)} ({((competitorChange / failingBank.price) * 100).toFixed(2)}%)
                         </span>
@@ -204,7 +204,7 @@ const StockMarketWidget: React.FC = () => {
                     </div>
                     <div className="text-right whitespace-nowrap pl-2">
                        <div className="text-white font-mono text-sm">{stock.price.toFixed(2)}</div>
-                       <div className={`text-[10px] font-bold ${stock.trend === 'up' ? 'text-emerald-500' : 'text-red-500'}`}>
+                       <div className={`text-[10px] font-bold ${stock.trend === 'up' ? 'text-blue-500' : 'text-red-500'}`}>
                           {stock.trend === 'up' ? '+' : ''}{stock.change.toFixed(2)}%
                        </div>
                     </div>
@@ -220,7 +220,7 @@ const StockMarketWidget: React.FC = () => {
 };
 
 // --- SAVINGS GLOBAL RANKING WIDGET ---
-// This widget is specifically designed to keep NovaBank floating between rank 15 and 20.
+// This widget is specifically designed to keep Azur Bank floating between rank 15 and 20.
 // It uses fixed price tiers to ensure the order is maintained roughly while allowing local shuffling.
 const SavingsGlobalRankingWidget: React.FC = () => {
     const { t, language } = useBank();
@@ -244,7 +244,7 @@ const SavingsGlobalRankingWidget: React.FC = () => {
 
     const [companies, setCompanies] = useState<RankingCompany[]>([
         // --- TIER 1: THE UNTOUCHABLES (Rank 1-14) ---
-        // High prices > 400. NovaBank can't reach these easily.
+        // High prices > 400. Azur Bank can't reach these easily.
         { name: "Apple Inc.", symbol: "AAPL", price: 950.20, change: 0, logoDomain: "apple.com" },
         { name: "Microsoft", symbol: "MSFT", price: 920.50, change: 0, logoDomain: "microsoft.com" },
         { name: "Saudi Aramco", symbol: "2222.SR", price: 890.00, change: 0, logoDomain: "aramco.com" },
@@ -261,16 +261,16 @@ const SavingsGlobalRankingWidget: React.FC = () => {
         { name: "Johnson & Johnson", symbol: "JNJ", price: 450.10, change: 0, logoDomain: "jnj.com" },
 
         // --- TIER 2: THE BATTLEGROUND (Rank 15-20) ---
-        // Mid prices ~300. This is where NovaBank lives.
+        // Mid prices ~300. This is where Azur Bank lives.
         { name: "JPMorgan Chase", symbol: "JPM", price: 320.50, change: 0, logoDomain: "jpmorganchase.com" },
         { name: "Samsung", symbol: "005930.KS", price: 315.20, change: 0, logoDomain: "samsung.com" },
         { name: "LVMH", symbol: "MC.PA", price: 310.80, change: 0, logoDomain: "lvmh.com" },
-        { name: "NovaBank Corp.", symbol: "NVB", price: 300.00, change: 0, isHero: true, logoDomain: "novabank.com" }, // HERO
+        { name: "Azur Bank Corp.", symbol: "NVB", price: 300.00, change: 0, isHero: true, logoDomain: "novabank.com" }, // HERO
         { name: "Walmart", symbol: "WMT", price: 295.40, change: 0, logoDomain: "walmart.com" },
         { name: "Procter & Gamble", symbol: "PG", price: 290.10, change: 0, logoDomain: "pg.com" },
 
         // --- TIER 3: THE FOLLOWERS (Rank 21+) ---
-        // Low prices < 200. NovaBank shouldn't fall here.
+        // Low prices < 200. Azur Bank shouldn't fall here.
         { name: "Mastercard", symbol: "MA", price: 190.50, change: 0, logoDomain: "mastercard.com" },
         { name: "ExxonMobil", symbol: "XOM", price: 180.20, change: 0, logoDomain: "exxonmobil.com" },
         { name: "Nestlé", symbol: "NESN", price: 170.80, change: 0, logoDomain: "nestle.com" },
@@ -299,14 +299,14 @@ const SavingsGlobalRankingWidget: React.FC = () => {
                         // Bottom tier: fluctuate but stay low
                         fluctuation = (Math.random() - 0.5) * 2;
                     } else {
-                        // Middle tier (NovaBank zone): Higher volatility to encourage shuffling
+                        // Middle tier (Azur Bank zone): Higher volatility to encourage shuffling
                         fluctuation = (Math.random() - 0.5) * 4; 
                     }
 
                     // Calculate new price
                     let newPrice = company.price + fluctuation;
 
-                    // "Rubber Band" logic specifically for NovaBank to keep it strictly in the mix
+                    // "Rubber Band" logic specifically for Azur Bank to keep it strictly in the mix
                     // but not letting it drift too far up or down out of the 300 range.
                     if (isHero) {
                         if (newPrice > 330) newPrice -= 1; // Push down if too high
@@ -325,12 +325,12 @@ const SavingsGlobalRankingWidget: React.FC = () => {
         return () => clearInterval(interval);
     }, []);
 
-    // Find NovaBank's current rank
+    // Find Azur Bank's current rank
     const novaRank = companies.findIndex(c => c.isHero) + 1;
 
     return (
         <div className="glass-panel p-6 md:p-8 rounded-3xl border border-white/5 relative overflow-hidden flex flex-col h-[500px] md:h-[600px]">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
             
             <div className="flex justify-between items-center mb-6 relative z-10">
                 <h3 className="text-lg md:text-xl font-bold text-white flex items-center gap-2">
@@ -341,9 +341,9 @@ const SavingsGlobalRankingWidget: React.FC = () => {
                 </div>
             </div>
 
-            {/* NovaBank Live Rank Indicator */}
-            <div className="mb-4 bg-emerald-900/20 border border-emerald-500/30 p-3 rounded-xl flex items-center justify-between">
-                 <span className="text-emerald-400 font-bold text-sm">{translations.yourBank}</span>
+            {/* Azur Bank Live Rank Indicator */}
+            <div className="mb-4 bg-blue-900/20 border border-blue-500/30 p-3 rounded-xl flex items-center justify-between">
+                 <span className="text-blue-400 font-bold text-sm">{translations.yourBank}</span>
                  <div className="flex items-center gap-2">
                     <span className="text-gray-400 text-xs">{translations.currentRank}</span>
                     <span className="text-2xl font-bold text-white">#{novaRank}</span>
@@ -361,21 +361,21 @@ const SavingsGlobalRankingWidget: React.FC = () => {
                                 key={company.symbol}
                                 className={`flex items-center justify-between p-2 md:p-3 rounded-xl transition-all duration-500 ${
                                     isNova 
-                                    ? 'bg-emerald-500/20 border border-emerald-500/50 shadow-[0_0_15px_rgba(16,185,129,0.2)] transform scale-[1.02]' 
+                                    ? 'bg-blue-500/20 border border-blue-500/50 shadow-[0_0_15px_rgba(37,99,235,0.2)] transform scale-[1.02]' 
                                     : 'bg-slate-800/30 border border-transparent hover:bg-slate-700/50'
                                 }`}
                             >
                                 <div className="flex items-center gap-2 md:gap-4">
                                     <div className={`w-6 h-6 md:w-8 md:h-8 flex items-center justify-center font-bold rounded-lg text-xs md:text-base ${
                                         rank <= 3 ? 'text-yellow-400 bg-yellow-400/10' : 
-                                        isNova ? 'text-emerald-400 bg-emerald-400/10' : 'text-gray-500 bg-slate-800'
+                                        isNova ? 'text-blue-400 bg-blue-400/10' : 'text-gray-500 bg-slate-800'
                                     }`}>
                                         {rank}
                                     </div>
                                     
                                     <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white p-0.5 shrink-0 overflow-hidden">
                                         {isNova ? (
-                                            <div className="w-full h-full bg-emerald-500 flex items-center justify-center text-white font-bold text-[10px]">NB</div>
+                                            <div className="w-full h-full bg-blue-500 flex items-center justify-center text-white font-bold text-[10px]">NB</div>
                                         ) : (
                                             <img 
                                                 src={`https://logo.clearbit.com/${company.logoDomain}`} 
@@ -397,10 +397,10 @@ const SavingsGlobalRankingWidget: React.FC = () => {
                                 </div>
 
                                 <div className="text-right">
-                                    <div className={`font-mono font-bold text-xs md:text-sm ${isNova ? 'text-emerald-400' : 'text-white'}`}>
+                                    <div className={`font-mono font-bold text-xs md:text-sm ${isNova ? 'text-blue-400' : 'text-white'}`}>
                                         {company.price.toFixed(2)} $
                                     </div>
-                                    <div className={`text-[10px] font-bold flex items-center justify-end ${company.change >= 0 ? 'text-emerald-500' : 'text-red-500'}`}>
+                                    <div className={`text-[10px] font-bold flex items-center justify-end ${company.change >= 0 ? 'text-blue-500' : 'text-red-500'}`}>
                                         {company.change >= 0 ? <TrendingUp className="h-3 w-3 mr-1"/> : <TrendingDown className="h-3 w-3 mr-1"/>}
                                         {Math.abs(company.change).toFixed(2)}%
                                     </div>
@@ -431,7 +431,7 @@ const CreditCardDisplay: React.FC = () => {
       
       {/* Header */}
       <div className="flex justify-between items-start relative z-10">
-        <div className="text-2xl font-bold italic tracking-wider">NovaBank</div>
+        <div className="text-2xl font-bold italic tracking-wider">Azur Bank</div>
         <CardIcon className="h-8 w-8 opacity-80" />
       </div>
       
@@ -655,7 +655,7 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         </button>
 
         <h2 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8 flex items-center gap-3">
-          <Settings className="h-6 w-6 text-emerald-400" />
+          <Settings className="h-6 w-6 text-blue-400" />
           {t('dashboard.settings')}
         </h2>
 
@@ -664,13 +664,13 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           {/* Avatar Section */}
           <div className="flex flex-col items-center gap-4">
             <div className={`relative group ${!isSaving ? 'cursor-pointer' : 'cursor-not-allowed opacity-50'}`} onClick={() => !isSaving && fileInputRef.current?.click()}>
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-slate-700 overflow-hidden shadow-xl group-hover:border-emerald-500 transition-colors">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-slate-700 overflow-hidden shadow-xl group-hover:border-blue-500 transition-colors">
                 <img src={formData.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
                   <Camera className="h-8 w-8 text-white" />
                 </div>
               </div>
-              <div className="absolute bottom-0 right-0 bg-emerald-500 rounded-full p-2 border-2 border-slate-900 shadow-lg">
+              <div className="absolute bottom-0 right-0 bg-blue-500 rounded-full p-2 border-2 border-slate-900 shadow-lg">
                 <div className="h-3 w-3 bg-white rounded-full"></div>
               </div>
             </div>
@@ -695,7 +695,7 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 value={formData.name}
                 onChange={e => setFormData({...formData, name: e.target.value})}
                 disabled={isSaving}
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-emerald-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-blue-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
 
@@ -708,7 +708,7 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 value={formData.email}
                 onChange={e => setFormData({...formData, email: e.target.value})}
                 disabled={isSaving}
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-emerald-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-blue-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
 
@@ -721,7 +721,7 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 value={formData.phone}
                 onChange={e => setFormData({...formData, phone: e.target.value})}
                 disabled={isSaving}
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-emerald-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-blue-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
             
@@ -731,7 +731,7 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                </label>
                <input
                   type="date"
-                  className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-emerald-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-blue-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   value={formData.birthDate}
                   onChange={e => setFormData({ ...formData, birthDate: e.target.value })}
                   disabled={isSaving}
@@ -747,7 +747,7 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 value={formData.address}
                 onChange={e => setFormData({...formData, address: e.target.value})}
                 disabled={isSaving}
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-emerald-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 text-white focus:border-blue-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
 
@@ -765,7 +765,7 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     />
                  </div>
                  <select
-                     className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 pl-12 text-white focus:border-emerald-500 outline-none appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
+                     className="w-full bg-slate-900/50 border border-slate-700 rounded-xl p-3 pl-12 text-white focus:border-blue-500 outline-none appearance-none disabled:opacity-50 disabled:cursor-not-allowed"
                      value={formData.country.code}
                      onChange={e => updateCountry(e.target.value)}
                      disabled={isSaving}
@@ -854,7 +854,7 @@ const SettingsModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <button 
               type="submit"
               disabled={isSaving}
-              className="flex-1 py-3 rounded-xl bg-emerald-500 text-white font-bold hover:bg-emerald-600 disabled:bg-emerald-600/70 disabled:cursor-not-allowed transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2"
+              className="flex-1 py-3 rounded-xl bg-blue-500 text-white font-bold hover:bg-blue-600 disabled:bg-blue-600/70 disabled:cursor-not-allowed transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2"
             >
               {isSaving ? (
                 <>
@@ -1050,7 +1050,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
         
         <h2 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center gap-2 relative z-10">
-          <Send className="text-emerald-400" />
+          <Send className="text-blue-400" />
           {isActive ? t('dashboard.transferModal.active') : t('dashboard.transferModal.title')}
         </h2>
 
@@ -1061,7 +1061,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700">
                 <label className="block text-gray-400 text-[10px] uppercase tracking-wider mb-2">{t('dashboard.transferModal.sourceAccount')}</label>
                 <div className="flex items-center gap-3">
-                   <div className="w-10 h-7 bg-emerald-500/20 rounded flex items-center justify-center text-emerald-400">
+                   <div className="w-10 h-7 bg-blue-500/20 rounded flex items-center justify-center text-blue-400">
                       <CardIcon className="h-4 w-4" />
                    </div>
                    <div className="text-white font-medium text-sm md:text-base">{t('dashboard.transferModal.mainAccount')}</div>
@@ -1077,7 +1077,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         <input
                             type="text"
                             required
-                            className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-emerald-500 outline-none transition-all placeholder-gray-600"
+                            className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-blue-500 outline-none transition-all placeholder-gray-600"
                             value={recipientName}
                             onChange={e => setRecipientName(e.target.value)}
                             placeholder={t('dashboard.transferModal.recipientNamePlaceholder')}
@@ -1093,7 +1093,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         <input
                             type="text"
                             required
-                            className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-emerald-500 outline-none transition-all placeholder-gray-600"
+                            className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-blue-500 outline-none transition-all placeholder-gray-600"
                             value={bankName}
                             onChange={e => setBankName(e.target.value)}
                             placeholder={t('dashboard.transferModal.bankNamePlaceholder')}
@@ -1111,7 +1111,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         <input
                             type="text"
                             required
-                            className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-emerald-500 outline-none transition-all placeholder-gray-600 font-mono text-sm"
+                            className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-blue-500 outline-none transition-all placeholder-gray-600 font-mono text-sm"
                             value={iban}
                             onChange={e => setIban(e.target.value)}
                             placeholder={t('dashboard.transferModal.ibanPlaceholder')}
@@ -1127,7 +1127,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         <input
                             type="text"
                             required
-                            className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-emerald-500 outline-none transition-all placeholder-gray-600 font-mono text-sm"
+                            className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-blue-500 outline-none transition-all placeholder-gray-600 font-mono text-sm"
                             value={bic}
                             onChange={e => setBic(e.target.value)}
                             placeholder={t('dashboard.transferModal.bicPlaceholder')}
@@ -1146,7 +1146,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         required
                         min="1"
                         step="0.01"
-                        className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-emerald-500 outline-none transition-all font-mono text-lg"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-blue-500 outline-none transition-all font-mono text-lg"
                         value={inputAmount}
                         onChange={e => { setInputAmount(e.target.value); setFundError(false); }}
                         placeholder="0.00"
@@ -1163,7 +1163,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     <input
                         type="text"
                         required
-                        className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-emerald-500 outline-none transition-all placeholder-gray-600"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:border-blue-500 outline-none transition-all placeholder-gray-600"
                         value={reason}
                         onChange={e => setReason(e.target.value)}
                         placeholder={t('dashboard.transferModal.reasonPlaceholder')}
@@ -1171,7 +1171,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 </div>
             </div>
 
-            <button className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-emerald-500/20 transform hover:scale-[1.02] mt-4">
+            <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-500/20 transform hover:scale-[1.02] mt-4">
               {t('dashboard.transferModal.submit')}
             </button>
           </form>
@@ -1183,24 +1183,24 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 
                 {/* Connecting Line (Background) */}
                 <div className="absolute left-16 right-16 top-1/2 h-1 bg-slate-700 rounded-full overflow-hidden">
-                    <div className="h-full bg-emerald-500/30 w-full animate-pulse"></div>
+                    <div className="h-full bg-blue-500/30 w-full animate-pulse"></div>
                 </div>
 
                 {/* Left Node (Sender) */}
                 <div className="relative z-10 flex flex-col items-center gap-3 animate-float">
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-800 border-2 border-emerald-500 shadow-[0_0_30px_rgba(16,185,129,0.3)] flex items-center justify-center relative">
-                        <div className="absolute inset-0 bg-emerald-500/10 rounded-full animate-ping-slow"></div>
-                        <ShieldCheck className="h-6 w-6 md:h-10 md:w-10 text-emerald-400" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-800 border-2 border-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.3)] flex items-center justify-center relative">
+                        <div className="absolute inset-0 bg-blue-500/10 rounded-full animate-ping-slow"></div>
+                        <ShieldCheck className="h-6 w-6 md:h-10 md:w-10 text-blue-400" />
                     </div>
-                    <div className="text-emerald-400 font-bold text-xs md:text-sm">NovaBank</div>
+                    <div className="text-blue-400 font-bold text-xs md:text-sm">Azur Bank</div>
                 </div>
 
                 {/* Right Node (Receiver) */}
                 <div className="relative z-10 flex flex-col items-center gap-3 animate-float-delayed">
-                     <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-800 border-2 flex items-center justify-center transition-all duration-500 ${completed ? 'border-emerald-500 shadow-[0_0_30px_rgba(16,185,129,0.5)] bg-emerald-500/10' : 'border-slate-600'}`}>
-                        {completed ? <CheckCircle className="h-6 w-6 md:h-10 md:w-10 text-emerald-400" /> : <Landmark className="h-6 w-6 md:h-10 md:w-10 text-gray-400" />}
+                     <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full bg-slate-800 border-2 flex items-center justify-center transition-all duration-500 ${completed ? 'border-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.5)] bg-blue-500/10' : 'border-slate-600'}`}>
+                        {completed ? <CheckCircle className="h-6 w-6 md:h-10 md:w-10 text-blue-400" /> : <Landmark className="h-6 w-6 md:h-10 md:w-10 text-gray-400" />}
                     </div>
-                    <div className={completed ? "text-emerald-400 font-bold text-xs md:text-sm" : "text-gray-400 text-xs md:text-sm"}>
+                    <div className={completed ? "text-blue-400 font-bold text-xs md:text-sm" : "text-gray-400 text-xs md:text-sm"}>
                         {activeRecipient || 'Destinataire'}
                     </div>
                 </div>
@@ -1217,7 +1217,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 transition-all duration-200 ease-linear z-20 flex flex-col items-center"
                     style={{ left: `calc(4rem + (100% - 8rem) * ${progress / 100})` }} 
                 >
-                    <div className="bg-white rounded-full shadow-[0_0_20px_rgba(255,255,255,0.8)] flex items-center justify-center text-emerald-600 font-bold border-4 border-emerald-500 relative px-3 py-1.5 md:px-4 md:py-2 min-w-[70px] md:min-w-[80px]">
+                    <div className="bg-white rounded-full shadow-[0_0_20px_rgba(255,255,255,0.8)] flex items-center justify-center text-blue-600 font-bold border-4 border-blue-500 relative px-3 py-1.5 md:px-4 md:py-2 min-w-[70px] md:min-w-[80px]">
                         <span className="text-xs md:text-sm whitespace-nowrap">
                             {/* Mobile View: Compact */}
                             <span className="md:hidden">
@@ -1231,7 +1231,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         {/* Trail effect */}
                         <div className="absolute right-full top-1/2 -translate-y-1/2 w-16 md:w-24 h-1 bg-gradient-to-l from-white to-transparent opacity-50"></div>
                     </div>
-                    <div className="mt-2 bg-slate-900/80 px-2 py-1 rounded text-[10px] text-emerald-400 font-mono border border-emerald-500/30 backdrop-blur-sm whitespace-nowrap">
+                    <div className="mt-2 bg-slate-900/80 px-2 py-1 rounded text-[10px] text-blue-400 font-mono border border-blue-500/30 backdrop-blur-sm whitespace-nowrap">
                         {t('dashboard.transferModal.transferring')}
                     </div>
                 </div>
@@ -1251,7 +1251,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         className={`h-full rounded-full transition-all duration-500 ease-out relative
                         ${isPaused 
                             ? 'bg-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.5)]' 
-                            : 'bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.5)]'}
+                            : 'bg-blue-500 shadow-[0_0_15px_rgba(37,99,235,0.5)]'}
                         `}
                         style={{ width: `${progress}%` }}
                     >
@@ -1260,7 +1260,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                     </div>
                 </div>
                 
-                <div className={`text-center font-mono text-xs md:text-sm transition-colors duration-300 ${isPaused ? 'text-yellow-400 animate-pulse' : 'text-emerald-400'}`}>
+                <div className={`text-center font-mono text-xs md:text-sm transition-colors duration-300 ${isPaused ? 'text-yellow-400 animate-pulse' : 'text-blue-400'}`}>
                     {currentStepDescription}
                 </div>
             </div>
@@ -1285,14 +1285,14 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                         <p className="text-gray-400 text-xs md:text-sm mb-4 md:mb-6 text-center md:text-left leading-relaxed">
                             {t('dashboard.transferModal.securityDesc')}
                             <br className="hidden md:block" />
-                            <span className="text-emerald-400 font-medium mt-1 md:mt-0 block md:inline md:ml-1">{t('dashboard.transferModal.securityDesc2')}</span>
+                            <span className="text-blue-400 font-medium mt-1 md:mt-0 block md:inline md:ml-1">{t('dashboard.transferModal.securityDesc2')}</span>
                         </p>
 
                         <form onSubmit={handleSubmitCode} className="flex flex-col md:flex-row gap-3">
                             <input
                                 type="text"
                                 autoFocus
-                                className={`w-full md:flex-1 bg-black/50 border ${codeError ? 'border-red-500' : 'border-slate-600'} rounded-xl p-3 md:p-4 text-white text-center font-mono text-sm md:text-base lg:text-lg tracking-[0.3em] md:tracking-[0.3em] uppercase focus:border-emerald-500 outline-none transition-all placeholder-gray-700`}
+                                className={`w-full md:flex-1 bg-black/50 border ${codeError ? 'border-red-500' : 'border-slate-600'} rounded-xl p-3 md:p-4 text-white text-center font-mono text-sm md:text-base lg:text-lg tracking-[0.3em] md:tracking-[0.3em] uppercase focus:border-blue-500 outline-none transition-all placeholder-gray-700`}
                                 placeholder={t('dashboard.transferModal.codePlaceholder')}
                                 maxLength={10}
                                 value={securityCode}
@@ -1300,7 +1300,7 @@ const TransferModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                             />
                             <button 
                                 type="submit"
-                                className="w-full md:w-auto bg-emerald-500 hover:bg-emerald-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold transition-all shadow-lg shadow-emerald-500/20 text-sm md:text-base whitespace-nowrap"
+                                className="w-full md:w-auto bg-blue-500 hover:bg-blue-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-bold transition-all shadow-lg shadow-blue-500/20 text-sm md:text-base whitespace-nowrap"
                             >
                                 {t('dashboard.transferModal.validate')}
                             </button>
@@ -1476,7 +1476,7 @@ const UserDashboard: React.FC = () => {
                             <div className="text-4xl md:text-5xl font-bold text-white mb-8 font-mono">
                                 {currentUser.balance.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} {CURRENCY}
                             </div>
-                            <div className="flex items-center gap-2 text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-lg w-fit mb-6">
+                            <div className="flex items-center gap-2 text-blue-400 bg-blue-500/10 px-3 py-1 rounded-lg w-fit mb-6">
                                 <TrendingUp className="h-4 w-4" /> +4.0% {translations.interestRate}
                             </div>
                             <div className="text-sm text-gray-400">
@@ -1487,7 +1487,7 @@ const UserDashboard: React.FC = () => {
                         {/* Savings Goals */}
                         <div className="glass-panel p-6 md:p-8 rounded-3xl border border-white/5">
                             <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                                <Target className="h-6 w-6 text-emerald-400" /> {translations.savingsGoals}
+                                <Target className="h-6 w-6 text-blue-400" /> {translations.savingsGoals}
                             </h3>
                             <div className="space-y-6">
                                 <div>
@@ -1496,7 +1496,7 @@ const UserDashboard: React.FC = () => {
                                         <span className="text-white font-bold">45%</span>
                                     </div>
                                     <div className="w-full bg-slate-800 rounded-full h-3">
-                                        <div className="bg-emerald-500 h-3 rounded-full w-[45%] shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+                                        <div className="bg-blue-500 h-3 rounded-full w-[45%] shadow-[0_0_10px_rgba(37,99,235,0.5)]"></div>
                                     </div>
                                 </div>
                                 <div>
@@ -1522,7 +1522,7 @@ const UserDashboard: React.FC = () => {
                                 <button className="py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium transition-all">
                                     {translations.newGoal}
                                 </button>
-                                <button className="py-3 rounded-xl bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 font-bold transition-all border border-emerald-500/50">
+                                <button className="py-3 rounded-xl bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 font-bold transition-all border border-blue-500/50">
                                     {translations.addFunds}
                                 </button>
                             </div>
@@ -1530,13 +1530,13 @@ const UserDashboard: React.FC = () => {
 
                          {/* Interest Projection Graph (Simple Visual) */}
                         <div className="glass-panel p-6 md:p-8 rounded-3xl border border-white/5 relative overflow-hidden hidden md:block">
-                            <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/10 to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-transparent"></div>
                             <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2 relative z-10">
                                 <Activity className="h-6 w-6 text-yellow-500" /> {translations.interestProjection}
                             </h3>
                             <div className="h-40 flex items-end justify-between gap-2 relative z-10 px-4">
                                 {[20, 35, 45, 60, 55, 70, 85, 90, 100, 115, 130, 145].map((h, i) => (
-                                    <div key={i} className="w-full bg-emerald-500/20 rounded-t-lg hover:bg-emerald-500/40 transition-colors relative group" style={{height: `${h}%`}}>
+                                    <div key={i} className="w-full bg-blue-500/20 rounded-t-lg hover:bg-blue-500/40 transition-colors relative group" style={{height: `${h}%`}}>
                                         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                                             +{h * 5}€
                                         </div>
@@ -1589,7 +1589,7 @@ const UserDashboard: React.FC = () => {
             <img 
               src={currentUser.avatarUrl} 
               alt="Profile" 
-              className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-emerald-500 shadow-lg object-cover cursor-pointer hover:opacity-80 transition-opacity" 
+              className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-blue-500 shadow-lg object-cover cursor-pointer hover:opacity-80 transition-opacity" 
               onClick={() => setShowAvatarModal(true)}
             />
             <div>
@@ -1604,7 +1604,7 @@ const UserDashboard: React.FC = () => {
                     />
                 )}
               </h1>
-              <p className="text-emerald-400 font-medium flex items-center gap-2 text-sm md:text-base">
+              <p className="text-blue-400 font-medium flex items-center gap-2 text-sm md:text-base">
                  <Wallet className="h-4 w-4" /> {translations.currentAccount} <span className="text-gray-400 font-normal text-xs md:text-sm hidden sm:inline">• {currentUser.email}</span>
               </p>
             </div>
@@ -1643,7 +1643,7 @@ const UserDashboard: React.FC = () => {
                 className={`w-full font-bold py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all hover:scale-[1.02] ${
                     hasActiveTransfer 
                     ? 'bg-yellow-500 hover:bg-yellow-600 text-slate-900 shadow-yellow-500/20' 
-                    : 'bg-emerald-500 hover:bg-emerald-600 text-white shadow-emerald-500/20'
+                    : 'bg-blue-500 hover:bg-blue-600 text-white shadow-blue-500/20'
                 }`}
               >
                 {hasActiveTransfer ? (
@@ -1668,7 +1668,7 @@ const UserDashboard: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="glass-panel rounded-2xl p-4 md:p-8 h-full min-h-[400px] md:min-h-[600px]">
               <div className="flex items-center gap-3 mb-6 md:mb-8">
-                <History className="h-6 w-6 text-emerald-400" />
+                <History className="h-6 w-6 text-blue-400" />
                 <h2 className="text-xl md:text-2xl font-bold text-white">{translations.transactionHistory}</h2>
               </div>
 
@@ -1685,7 +1685,7 @@ const UserDashboard: React.FC = () => {
                       <div key={transaction.id} className="bg-slate-800/50 p-3 md:p-4 rounded-xl flex justify-between items-center hover:bg-slate-800 transition-colors border border-transparent hover:border-slate-700 animate-fade-in-up">
                         <div className="flex items-center gap-3 md:gap-4">
                           <div className={`h-8 w-8 md:h-10 md:w-10 rounded-full flex items-center justify-center shadow-inner shrink-0 ${
-                              isCredit ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-700 text-white'
+                              isCredit ? 'bg-blue-500/20 text-blue-400' : 'bg-slate-700 text-white'
                           }`}>
                             {isCredit ? <ArrowDownLeft className="h-4 w-4 md:h-5 md:w-5" /> : <ArrowUpRight className="h-4 w-4 md:h-5 md:w-5" />}
                           </div>
@@ -1697,11 +1697,11 @@ const UserDashboard: React.FC = () => {
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className={`font-bold text-sm md:text-lg ${isCredit ? 'text-emerald-500' : 'text-white'}`}>
+                          <div className={`font-bold text-sm md:text-lg ${isCredit ? 'text-blue-500' : 'text-white'}`}>
                               {isCredit ? '+' : '-'} {transaction.amount.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} {CURRENCY}
                           </div>
                           <div className={`text-[10px] font-bold uppercase tracking-wider ${
-                            transaction.status === 'COMPLETED' ? 'text-emerald-500' : 'text-yellow-500'
+                            transaction.status === 'COMPLETED' ? 'text-blue-500' : 'text-yellow-500'
                           }`}>
                             {transaction.status === 'COMPLETED' ? translations.completed : transaction.status === 'PENDING' ? translations.pending : translations.failed}
                           </div>

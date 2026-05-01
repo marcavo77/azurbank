@@ -54,14 +54,14 @@ const Cookies: React.FC = () => {
                     <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
                             <h3 className="text-lg font-bold text-white">{t('cookies.essential.title')}</h3>
-                            <span className="text-[10px] font-bold uppercase bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/30">{t('cookies.required')}</span>
+                            <span className="text-[10px] font-bold uppercase bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded border border-blue-500/30">{t('cookies.required')}</span>
                         </div>
                         <p className="text-sm text-gray-400 leading-relaxed">
                             {t('cookies.essential.description')}
                         </p>
                     </div>
                     <div className="shrink-0">
-                         <div className="w-14 h-8 bg-emerald-500/50 rounded-full p-1 cursor-not-allowed opacity-80">
+                         <div className="w-14 h-8 bg-blue-500/50 rounded-full p-1 cursor-not-allowed opacity-80">
                             <div className="w-6 h-6 bg-white rounded-full shadow-md translate-x-6"></div>
                          </div>
                     </div>
@@ -80,7 +80,7 @@ const Cookies: React.FC = () => {
                     <div className="shrink-0">
                          <button 
                             onClick={() => togglePreference('analytics')}
-                            className={`w-14 h-8 rounded-full p-1 transition-colors duration-300 ${preferences.analytics ? 'bg-emerald-500' : 'bg-slate-600'}`}
+                            className={`w-14 h-8 rounded-full p-1 transition-colors duration-300 ${preferences.analytics ? 'bg-blue-500' : 'bg-slate-600'}`}
                         >
                             <div className={`w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ${preferences.analytics ? 'translate-x-6' : 'translate-x-0'}`}></div>
                          </button>
@@ -100,7 +100,7 @@ const Cookies: React.FC = () => {
                     <div className="shrink-0">
                          <button 
                             onClick={() => togglePreference('preferences')}
-                            className={`w-14 h-8 rounded-full p-1 transition-colors duration-300 ${preferences.preferences ? 'bg-emerald-500' : 'bg-slate-600'}`}
+                            className={`w-14 h-8 rounded-full p-1 transition-colors duration-300 ${preferences.preferences ? 'bg-blue-500' : 'bg-slate-600'}`}
                         >
                             <div className={`w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ${preferences.preferences ? 'translate-x-6' : 'translate-x-0'}`}></div>
                          </button>
@@ -120,7 +120,7 @@ const Cookies: React.FC = () => {
                     <div className="shrink-0">
                          <button 
                             onClick={() => togglePreference('marketing')}
-                            className={`w-14 h-8 rounded-full p-1 transition-colors duration-300 ${preferences.marketing ? 'bg-emerald-500' : 'bg-slate-600'}`}
+                            className={`w-14 h-8 rounded-full p-1 transition-colors duration-300 ${preferences.marketing ? 'bg-blue-500' : 'bg-slate-600'}`}
                         >
                             <div className={`w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ${preferences.marketing ? 'translate-x-6' : 'translate-x-0'}`}></div>
                          </button>
@@ -138,7 +138,7 @@ const Cookies: React.FC = () => {
                 </button>
                 <button 
                     onClick={handleSave}
-                    className="px-6 py-3 rounded-xl bg-emerald-500 text-white font-bold hover:bg-emerald-600 shadow-lg shadow-emerald-500/20 transition-colors"
+                    className="px-6 py-3 rounded-xl bg-blue-500 text-white font-bold hover:bg-blue-600 shadow-lg shadow-blue-500/20 transition-colors"
                 >
                     {t('cookies.saveChoices')}
                 </button>

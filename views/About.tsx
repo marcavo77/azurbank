@@ -8,25 +8,25 @@ const About: React.FC = () => {
   return (
     <div className="bg-slate-900 min-h-screen pt-20">
       <section className="py-12 px-4 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-emerald-500/5 blur-[120px] rounded-full"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-500/5 blur-[120px] rounded-full"></div>
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
           <div className="relative animate-fade-in-up">
-            <div className="absolute -inset-4 bg-emerald-500/20 rounded-2xl blur-lg"></div>
+            <div className="absolute -inset-4 bg-blue-500/20 rounded-2xl blur-lg"></div>
             <img 
               src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
               alt="Futuristic Office" 
               className="relative rounded-2xl shadow-2xl border border-slate-700 w-full object-cover h-[500px]"
             />
-            <div className="absolute -bottom-6 -right-6 glass-panel p-6 rounded-xl border border-emerald-500/30 backdrop-blur-md bg-slate-900/80">
-               <div className="text-4xl font-bold text-emerald-400">10M+</div>
+            <div className="absolute -bottom-6 -right-6 glass-panel p-6 rounded-xl border border-blue-500/30 backdrop-blur-md bg-slate-900/80">
+               <div className="text-4xl font-bold text-blue-400">10M+</div>
                <div className="text-sm text-gray-300">{t('about.activeUsers')}</div>
             </div>
           </div>
           
           <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl md:text-6xl font-bold text-white">
-              {t('about.title')} <span className="text-emerald-400">{t('about.titleHighlight')}</span>
+              {t('about.title')} <span className="text-blue-400">{t('about.titleHighlight')}</span>
             </h1>
             <p className="text-lg text-gray-400 leading-relaxed">
               {t('about.description')}
@@ -40,7 +40,7 @@ const About: React.FC = () => {
                 t('about.feature4')
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-emerald-500" />
+                  <CheckCircle className="h-6 w-6 text-blue-500" />
                   <span className="text-white font-medium">{item}</span>
                 </div>
               ))}
@@ -75,7 +75,7 @@ const About: React.FC = () => {
 
       {/* Team Section */}
       <section className="py-24 px-4 bg-slate-900 relative overflow-hidden border-t border-slate-800">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[100px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px]"></div>
         <div className="max-w-7xl mx-auto relative z-10">
            <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{t('team.title')}</h2>
@@ -108,17 +108,17 @@ const About: React.FC = () => {
               }
             ], [t, language]).map((member, i) => (
                <div key={i} className="group relative">
-                  <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 group-hover:border-emerald-500/50 transition-all shadow-2xl">
+                  <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 group-hover:border-blue-500/50 transition-all shadow-2xl">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
-                       <div className="text-emerald-400 font-bold text-sm mb-1">{member.role}</div>
+                       <div className="text-blue-400 font-bold text-sm mb-1">{member.role}</div>
                        <div className="text-white font-bold text-xl">{member.name}</div>
                     </div>
                   </div>
                   {/* Badge Effect */}
                   <div className="absolute top-4 right-4 bg-slate-900/80 backdrop-blur p-2 rounded-lg border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
-                     <ShieldCheck className="h-4 w-4 text-emerald-500" />
+                     <ShieldCheck className="h-4 w-4 text-blue-500" />
                   </div>
                </div>
             ))}
@@ -141,7 +141,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
              
              {/* Card 1 */}
-             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-emerald-500/50 transition-colors">
+             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-blue-500/50 transition-colors">
                 <div className="absolute inset-0">
                    <img 
                       src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
@@ -152,7 +152,7 @@ const About: React.FC = () => {
                 </div>
 
                 <div className="absolute top-[45%] right-[25%] transform -translate-y-1/2 w-20 flex flex-col items-center opacity-90 rotate-[-5deg] mix-blend-hard-light filter brightness-110">
-                    <ShieldCheck className="text-emerald-400 h-8 w-8 drop-shadow-md" strokeWidth={2.5} />
+                    <ShieldCheck className="text-blue-400 h-8 w-8 drop-shadow-md" strokeWidth={2.5} />
                     <span className="text-white font-bold text-[10px] tracking-widest drop-shadow-md mt-1 font-sans">NOVABANK</span>
                 </div>
 
@@ -166,7 +166,7 @@ const About: React.FC = () => {
              </div>
 
              {/* Card 2 */}
-             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-emerald-500/50 transition-colors">
+             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-blue-500/50 transition-colors">
                 <div className="absolute inset-0">
                    <img 
                       src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
@@ -177,10 +177,10 @@ const About: React.FC = () => {
                 </div>
 
                 <div className="absolute top-[55%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-24 flex flex-col items-center opacity-85 rotate-[2deg] mix-blend-screen">
-                     <div className="bg-emerald-600/80 p-1 rounded-full mb-1">
+                     <div className="bg-blue-600/80 p-1 rounded-full mb-1">
                         <ShieldCheck className="text-white h-6 w-6" />
                      </div>
-                    <span className="text-emerald-300 font-black text-[12px] tracking-tighter drop-shadow-lg font-sans bg-slate-900/30 px-2 rounded">NOVABANK</span>
+                    <span className="text-blue-300 font-black text-[12px] tracking-tighter drop-shadow-lg font-sans bg-slate-900/30 px-2 rounded">NOVABANK</span>
                     <span className="text-white text-[8px] uppercase tracking-widest">Foundation</span>
                 </div>
 
@@ -194,7 +194,7 @@ const About: React.FC = () => {
              </div>
 
              {/* Card 3 */}
-             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-emerald-500/50 transition-colors">
+             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-blue-500/50 transition-colors">
                 <div className="absolute inset-0">
                    <img 
                       src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 

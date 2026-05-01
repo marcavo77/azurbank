@@ -3,11 +3,11 @@ import { Settings, Shield, Clock } from 'lucide-react';
 
 const MaintenancePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center p-6 text-center text-slate-100 font-sans selection:bg-emerald-500 selection:text-white relative overflow-hidden">
+    <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center p-6 text-center text-slate-100 font-sans selection:bg-blue-500 selection:text-white relative overflow-hidden">
       
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-500/10 rounded-full blur-[120px]"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px]"></div>
       </div>
 
@@ -15,14 +15,14 @@ const MaintenancePage: React.FC = () => {
         {/* Logo Icon */}
         <div className="flex justify-center mb-8">
           <div className="relative">
-            <div className="absolute inset-0 bg-emerald-500 blur-xl opacity-20 rounded-full animate-pulse"></div>
+            <div className="absolute inset-0 bg-blue-500 blur-xl opacity-20 rounded-full animate-pulse"></div>
             <div className="h-24 w-24 bg-slate-800 rounded-2xl border border-slate-700 flex items-center justify-center shadow-xl relative z-10">
-              <Settings className="w-12 h-12 text-emerald-400 animate-[spin_4s_linear_infinite]" />
+              <Settings className="w-12 h-12 text-blue-400 animate-[spin_4s_linear_infinite]" />
             </div>
           </div>
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
           Site em manutenção temporária
         </h1>
         
@@ -40,8 +40,8 @@ const MaintenancePage: React.FC = () => {
           </div>
           
           <div className="bg-slate-800/50 backdrop-blur-md border border-slate-700/50 p-6 rounded-2xl flex flex-col items-center text-center">
-            <div className="h-12 w-12 bg-emerald-500/20 rounded-full flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6 text-emerald-400" />
+            <div className="h-12 w-12 bg-blue-500/20 rounded-full flex items-center justify-center mb-4">
+              <Shield className="w-6 h-6 text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Segurança reforçada</h3>
             <p className="text-sm text-slate-400">Seus dados e fundos permanecem totalmente seguros.</p>
@@ -50,8 +50,8 @@ const MaintenancePage: React.FC = () => {
 
         <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-800/80 border border-slate-700/50 text-sm text-slate-300">
           <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
           </span>
           Equipe técnica trabalhando
         </div>

@@ -152,7 +152,7 @@ export const Auth: React.FC = () => {
                 <input
                   type="email"
                   placeholder={t('auth.login.email')}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-emerald-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-blue-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   value={loginEmail}
                   onChange={e => setLoginEmail(e.target.value)}
                   disabled={isLoggingIn}
@@ -165,7 +165,7 @@ export const Auth: React.FC = () => {
                 <input
                   type={showLoginPassword ? "text" : "password"}
                   placeholder={t('auth.login.password')}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 pr-10 text-white focus:outline-none focus:border-emerald-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 pr-10 text-white focus:outline-none focus:border-blue-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   value={loginPassword}
                   onChange={e => setLoginPassword(e.target.value)}
                   disabled={isLoggingIn}
@@ -186,7 +186,7 @@ export const Auth: React.FC = () => {
               <button
                 type="submit"
                 disabled={isLoggingIn}
-                className="w-full bg-emerald-500 hover:bg-emerald-600 disabled:bg-emerald-600/70 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2"
+                className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-600/70 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2"
               >
                 {isLoggingIn ? (
                   <>
@@ -206,7 +206,7 @@ export const Auth: React.FC = () => {
               <button
                 onClick={() => setView('REGISTER')}
                 disabled={isLoggingIn}
-                className="text-emerald-400 hover:text-emerald-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
+                className="text-blue-400 hover:text-blue-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
               >
                 {t('auth.login.noAccount')}
               </button>
@@ -224,9 +224,9 @@ export const Auth: React.FC = () => {
         {/* Progress Bar */}
         <div className="flex items-center justify-between mb-8 relative">
             <div className="absolute left-0 right-0 top-1/2 h-1 bg-slate-700 -z-10"></div>
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${step >= 1 ? 'bg-emerald-500 text-white' : 'bg-slate-700 text-gray-400'}`}>1</div>
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${step >= 2 ? 'bg-emerald-500 text-white' : 'bg-slate-700 text-gray-400'}`}>2</div>
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${step >= 3 ? 'bg-emerald-500 text-white' : 'bg-slate-700 text-gray-400'}`}>3</div>
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${step >= 1 ? 'bg-blue-500 text-white' : 'bg-slate-700 text-gray-400'}`}>1</div>
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${step >= 2 ? 'bg-blue-500 text-white' : 'bg-slate-700 text-gray-400'}`}>2</div>
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${step >= 3 ? 'bg-blue-500 text-white' : 'bg-slate-700 text-gray-400'}`}>3</div>
         </div>
 
         <div className="text-center mb-8">
@@ -245,7 +245,7 @@ export const Auth: React.FC = () => {
              <div className="space-y-4">
                 <div className="flex justify-center mb-6">
                     <div className={`relative group ${!isRegistering ? 'cursor-pointer' : 'cursor-not-allowed opacity-50'}`} onClick={() => !isRegistering && triggerFileInput()}>
-                        <div className="w-24 h-24 rounded-full bg-slate-800 border-2 border-dashed border-slate-600 flex items-center justify-center overflow-hidden hover:border-emerald-500 transition-colors">
+                        <div className="w-24 h-24 rounded-full bg-slate-800 border-2 border-dashed border-slate-600 flex items-center justify-center overflow-hidden hover:border-blue-500 transition-colors">
                             {formData.avatarUrl ? (
                                 <img src={formData.avatarUrl} alt="Preview" className="w-full h-full object-cover" />
                             ) : (
@@ -255,7 +255,7 @@ export const Auth: React.FC = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="absolute bottom-0 right-0 bg-emerald-500 rounded-full p-1.5 shadow-lg border-2 border-slate-900">
+                        <div className="absolute bottom-0 right-0 bg-blue-500 rounded-full p-1.5 shadow-lg border-2 border-slate-900">
                              <Upload className="h-3 w-3 text-white" />
                         </div>
                         <input 
@@ -274,7 +274,7 @@ export const Auth: React.FC = () => {
                         <input
                             type="text"
                             placeholder={t('auth.register.fullName')}
-                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                             value={formData.name}
                             onChange={e => setFormData({ ...formData, name: e.target.value })}
                             disabled={isRegistering}
@@ -285,7 +285,7 @@ export const Auth: React.FC = () => {
                         <Calendar className="absolute left-3 top-3 text-gray-400 h-5 w-5" />
                         <input
                             type="date"
-                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-emerald-500 placeholder-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-blue-500 placeholder-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
                             value={formData.birthDate}
                             onChange={e => setFormData({ ...formData, birthDate: e.target.value })}
                             disabled={isRegistering}
@@ -298,7 +298,7 @@ export const Auth: React.FC = () => {
                     <input
                         type="email"
                         placeholder={t('auth.register.email')}
-                        className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                         value={formData.email}
                         onChange={e => setFormData({ ...formData, email: e.target.value })}
                         disabled={isRegistering}
@@ -317,7 +317,7 @@ export const Auth: React.FC = () => {
                     <input
                         type="text"
                         placeholder={t('auth.register.address')}
-                        className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                         value={formData.address}
                         onChange={e => setFormData({ ...formData, address: e.target.value })}
                         disabled={isRegistering}
@@ -328,7 +328,7 @@ export const Auth: React.FC = () => {
                     <input
                         type="text"
                         placeholder={t('auth.register.postalCode')}
-                        className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                         value={formData.postalCode}
                         onChange={e => setFormData({ ...formData, postalCode: e.target.value })}
                         disabled={isRegistering}
@@ -344,7 +344,7 @@ export const Auth: React.FC = () => {
                             />
                         </div>
                         <select
-                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:outline-none focus:border-emerald-500 appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:outline-none focus:border-blue-500 appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                             value={formData.country.code}
                             onChange={e => updateCountry(e.target.value)}
                             disabled={isRegistering}
@@ -363,7 +363,7 @@ export const Auth: React.FC = () => {
                     <input
                         type="tel"
                         placeholder={t('auth.register.phone')}
-                        className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 text-white focus:outline-none focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                         value={formData.phone}
                         onChange={e => setFormData({ ...formData, phone: e.target.value })}
                         disabled={isRegistering}
@@ -381,9 +381,9 @@ export const Auth: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4">
                     <div 
                         onClick={() => setFormData({...formData, accountType: 'CURRENT'})}
-                        className={`cursor-pointer p-4 rounded-xl border-2 transition-all text-center ${formData.accountType === 'CURRENT' ? 'border-emerald-500 bg-emerald-500/10' : 'border-slate-700 bg-slate-800 hover:border-slate-500'}`}
+                        className={`cursor-pointer p-4 rounded-xl border-2 transition-all text-center ${formData.accountType === 'CURRENT' ? 'border-blue-500 bg-blue-500/10' : 'border-slate-700 bg-slate-800 hover:border-slate-500'}`}
                     >
-                        <CreditCard className={`h-8 w-8 mx-auto mb-2 ${formData.accountType === 'CURRENT' ? 'text-emerald-400' : 'text-gray-400'}`} />
+                        <CreditCard className={`h-8 w-8 mx-auto mb-2 ${formData.accountType === 'CURRENT' ? 'text-blue-400' : 'text-gray-400'}`} />
                         <div className="font-bold text-white">{t('auth.register.accountType.current')}</div>
                         <div className="text-xs text-gray-500 mt-1">{t('auth.register.accountType.currentDesc')}</div>
                     </div>
@@ -403,7 +403,7 @@ export const Auth: React.FC = () => {
                         <input
                             type={showRegisterPassword ? "text" : "password"}
                             placeholder={t('auth.register.password')}
-                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 pr-10 text-white focus:outline-none focus:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 pr-10 text-white focus:outline-none focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                             value={formData.password}
                             onChange={e => setFormData({ ...formData, password: e.target.value })}
                             disabled={isRegistering}
@@ -423,7 +423,7 @@ export const Auth: React.FC = () => {
                         <input
                             type={showConfirmPassword ? "text" : "password"}
                             placeholder={t('auth.register.confirmPassword')}
-                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 pr-10 text-white focus:outline-none focus:border-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-10 pr-10 text-white focus:outline-none focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                             value={confirmPassword}
                             onChange={e => setConfirmPassword(e.target.value)}
                             disabled={isRegistering}
@@ -444,9 +444,9 @@ export const Auth: React.FC = () => {
           
           {/* Dynamic Feedback for Password Match */}
           {step === 3 && isPasswordMatching && isPasswordValid ? (
-             <div className="bg-emerald-500/20 border border-emerald-500/50 rounded-xl p-3 flex items-center justify-center gap-2 animate-fade-in-up">
-                <Check className="h-5 w-5 text-emerald-400" />
-                <span className="text-emerald-400 text-sm font-bold">{t('auth.register.passwordValid')}</span>
+             <div className="bg-blue-500/20 border border-blue-500/50 rounded-xl p-3 flex items-center justify-center gap-2 animate-fade-in-up">
+                <Check className="h-5 w-5 text-blue-400" />
+                <span className="text-blue-400 text-sm font-bold">{t('auth.register.passwordValid')}</span>
              </div>
           ) : (
             error && <p className="text-red-400 text-sm text-center bg-red-500/10 p-2 rounded animate-pulse flex items-center justify-center gap-2">
@@ -479,7 +479,7 @@ export const Auth: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isRegistering}
-                    className="flex-1 bg-emerald-500 hover:bg-emerald-600 disabled:bg-emerald-600/70 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2"
+                    className="flex-1 bg-blue-500 hover:bg-blue-600 disabled:bg-blue-600/70 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2"
                   >
                     {isRegistering ? (
                       <>
@@ -500,7 +500,7 @@ export const Auth: React.FC = () => {
           <button
             onClick={() => setView('LOGIN')}
             disabled={isRegistering}
-            className="text-emerald-400 hover:text-emerald-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
+            className="text-blue-400 hover:text-blue-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm font-medium"
           >
             {t('auth.register.hasAccount')}
           </button>

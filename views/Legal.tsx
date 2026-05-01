@@ -9,7 +9,7 @@ const Legal: React.FC = () => {
     <div className="bg-slate-900 min-h-screen pt-20">
       <div className="py-16 px-4 text-center">
         <div className="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-slate-700">
-            <Scale className="h-8 w-8 text-emerald-400" />
+            <Scale className="h-8 w-8 text-blue-400" />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('legal.title')}</h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -22,7 +22,7 @@ const Legal: React.FC = () => {
         {/* Editeur */}
         <div className="glass-panel p-8 rounded-2xl border border-slate-700">
             <div className="flex items-center gap-4 mb-6">
-                <Building2 className="h-6 w-6 text-emerald-400" />
+                <Building2 className="h-6 w-6 text-blue-400" />
                 <h2 className="text-2xl font-bold text-white">{t('legal.section1.title')}</h2>
             </div>
             <div className="space-y-4 text-gray-300 leading-relaxed">

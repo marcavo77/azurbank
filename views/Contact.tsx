@@ -93,8 +93,8 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-12">
             <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
-                  <MapPin className="h-8 w-8 text-emerald-400" />
+                <div className="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0">
+                  <MapPin className="h-8 w-8 text-blue-400" />
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-xl mb-2">{t('contact.headquarters')}</h3>
@@ -103,8 +103,8 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
-                  <Mail className="h-8 w-8 text-emerald-400" />
+                <div className="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0">
+                  <Mail className="h-8 w-8 text-blue-400" />
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-xl mb-2">{t('contact.email')}</h3>
@@ -113,8 +113,8 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-6">
-                <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
-                  <Phone className="h-8 w-8 text-emerald-400" />
+                <div className="w-16 h-16 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0">
+                  <Phone className="h-8 w-8 text-blue-400" />
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-xl mb-2">{t('contact.phone')}</h3>
@@ -128,9 +128,9 @@ const Contact: React.FC = () => {
             
             {/* Success Message */}
             {submitStatus === 'success' && (
-              <div className="mb-6 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-emerald-400 shrink-0" />
-                <p className="text-emerald-400">{t('contact.messageSent')}</p>
+              <div className="mb-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-blue-400 shrink-0" />
+                <p className="text-blue-400">{t('contact.messageSent')}</p>
               </div>
             )}
 
@@ -148,7 +148,7 @@ const Contact: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-400 mb-2">{t('contact.lastName')}</label>
                   <input 
                     type="text" 
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-emerald-500 outline-none transition-colors" 
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors" 
                     placeholder={t('contact.lastNamePlaceholder')}
                     value={formData.lastName}
                     onChange={handleChange('lastName')}
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-400 mb-2">{t('contact.firstName')}</label>
                   <input 
                     type="text" 
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-emerald-500 outline-none transition-colors" 
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors" 
                     placeholder={t('contact.firstNamePlaceholder')}
                     value={formData.firstName}
                     onChange={handleChange('firstName')}
@@ -173,7 +173,7 @@ const Contact: React.FC = () => {
                 <label className="block text-sm font-medium text-gray-400 mb-2">{t('contact.email')}</label>
                 <input 
                   type="email" 
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-emerald-500 outline-none transition-colors" 
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors" 
                   placeholder={t('contact.emailPlaceholder')}
                   value={formData.email}
                   onChange={handleChange('email')}
@@ -185,7 +185,7 @@ const Contact: React.FC = () => {
                 <label className="block text-sm font-medium text-gray-400 mb-2">{t('contact.message')}</label>
                 <textarea 
                   rows={4} 
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-emerald-500 outline-none transition-colors resize-none" 
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-colors resize-none" 
                   placeholder={t('contact.messagePlaceholder')}
                   value={formData.message}
                   onChange={handleChange('message')}
@@ -196,7 +196,7 @@ const Contact: React.FC = () => {
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-emerald-500 hover:bg-emerald-600 disabled:bg-emerald-500/50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2"
+                className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-500/50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>

@@ -108,7 +108,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
         </button>
 
         <h2 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8 flex items-center gap-3">
-          <Settings className="h-6 w-6 text-emerald-400" />
+          <Settings className="h-6 w-6 text-blue-400" />
           {t('admin.settings')}
         </h2>
 
@@ -120,7 +120,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
         )}
 
         {success && (
-          <div className="bg-emerald-500/20 border border-emerald-500/50 rounded-lg p-3 text-emerald-400 text-sm flex items-center gap-2 mb-6">
+          <div className="bg-blue-500/20 border border-blue-500/50 rounded-lg p-3 text-blue-400 text-sm flex items-center gap-2 mb-6">
             <Check className="h-4 w-4" />
             <span>{success}</span>
           </div>
@@ -130,7 +130,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
           {/* Update Email Section */}
           <form onSubmit={handleUpdateEmail} className="space-y-4">
             <h3 className="text-lg font-bold text-white flex items-center gap-2">
-              <Mail className="h-5 w-5 text-emerald-400" />
+              <Mail className="h-5 w-5 text-blue-400" />
               {t('admin.updateEmail')}
             </h3>
             
@@ -154,7 +154,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-emerald-500"
+                className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
                 placeholder={t('admin.newEmailPlaceholder')}
                 required
               />
@@ -163,7 +163,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
             <button
               type="submit"
               disabled={isLoading || email === currentUser?.email}
-              className="w-full py-3 bg-emerald-500 hover:bg-emerald-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all shadow-lg shadow-emerald-500/20"
+              className="w-full py-3 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all shadow-lg shadow-blue-500/20"
             >
               {isLoading ? t('admin.updating') : t('admin.updateEmailButton')}
             </button>
@@ -174,7 +174,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
           {/* Update Password Section */}
           <form onSubmit={handleUpdatePassword} className="space-y-4">
             <h3 className="text-lg font-bold text-white flex items-center gap-2">
-              <Key className="h-5 w-5 text-emerald-400" />
+              <Key className="h-5 w-5 text-blue-400" />
               {t('admin.updatePassword')}
             </h3>
             
@@ -187,7 +187,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
                   type={showNewPassword ? 'text' : 'password'}
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 pr-10 text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 pr-10 text-white focus:outline-none focus:border-blue-500"
                   placeholder="••••••••"
                   required
                   minLength={6}
@@ -211,7 +211,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
                   type={showConfirmPassword ? 'text' : 'password'}
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 pr-10 text-white focus:outline-none focus:border-emerald-500"
+                  className="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 pr-10 text-white focus:outline-none focus:border-blue-500"
                   placeholder="••••••••"
                   required
                   minLength={6}
@@ -229,7 +229,7 @@ const AdminSettingsModal: React.FC<{ onClose: () => void; currentUser: UserType 
             <button
               type="submit"
               disabled={isLoading || !newPassword || !confirmPassword}
-              className="w-full py-3 bg-emerald-500 hover:bg-emerald-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all shadow-lg shadow-emerald-500/20"
+              className="w-full py-3 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all shadow-lg shadow-blue-500/20"
             >
               {isLoading ? t('admin.updating') : t('admin.updatePasswordButton')}
             </button>
@@ -536,7 +536,7 @@ const AdminDashboard: React.FC = () => {
           </div>
           <div className="glass-panel p-4 md:p-6 rounded-xl">
              <div className="text-gray-400 mb-1 md:mb-2 text-sm md:text-base">{t('admin.clientBalance')}</div>
-             <div className="text-2xl md:text-3xl font-bold text-emerald-400 truncate text-2xl">
+             <div className="text-2xl md:text-3xl font-bold text-blue-400 truncate text-2xl">
                 {isLoading ? (
                   <span className="text-gray-500">{t('common.loading')}</span>
                 ) : (
@@ -601,7 +601,7 @@ const AdminDashboard: React.FC = () => {
                                     onClick={() => handleCopyCode(transfer.requiredCode || '', transfer.userId || 'unknown')}
                                     className={`p-2 rounded-md transition-all duration-300 transform ${
                                       isCopied 
-                                      ? 'bg-emerald-500 text-white scale-110 shadow-lg shadow-emerald-500/50' 
+                                      ? 'bg-blue-500 text-white scale-110 shadow-lg shadow-blue-500/50' 
                                       : 'hover:bg-slate-700 text-gray-400 hover:text-white'
                                     }`}
                                     title={isCopied ? t('chat.copied') : t('admin.copyCode')}
@@ -609,7 +609,7 @@ const AdminDashboard: React.FC = () => {
                                     {isCopied ? <Check className="h-5 w-5 animate-bounce" /> : <Copy className="h-5 w-5" />}
                                 </button>
                             </div>
-                            <p className={`text-xs mt-2 text-center transition-colors duration-300 ${isCopied ? 'text-emerald-400 font-bold' : 'text-gray-500'}`}>
+                            <p className={`text-xs mt-2 text-center transition-colors duration-300 ${isCopied ? 'text-blue-400 font-bold' : 'text-gray-500'}`}>
                               {isCopied ? t('admin.codeCopied') : t('admin.codeInstructions')}
                             </p>
                         </div>
@@ -623,7 +623,7 @@ const AdminDashboard: React.FC = () => {
         <div className="mb-16">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-6">
             <h2 className="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
-              <User className="text-emerald-500 h-5 w-5 md:h-6 md:w-6" /> {t('admin.manageClients')}
+              <User className="text-blue-500 h-5 w-5 md:h-6 md:w-6" /> {t('admin.manageClients')}
             </h2>
           </div>
 
@@ -632,7 +632,7 @@ const AdminDashboard: React.FC = () => {
             <input
               type="text"
               placeholder={t('admin.searchClient')}
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:outline-none focus:border-emerald-500"
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl py-3 pl-12 text-white focus:outline-none focus:border-blue-500"
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
             />
@@ -664,7 +664,7 @@ const AdminDashboard: React.FC = () => {
                             </div>
                           </div>
                         </td>
-                        <td className="px-3 md:px-6 py-3 md:py-4 font-mono text-emerald-400 font-bold text-xs md:text-sm">
+                        <td className="px-3 md:px-6 py-3 md:py-4 font-mono text-blue-400 font-bold text-xs md:text-sm">
                           {(() => {
                             const balance = typeof user.balance === 'string' 
                               ? parseFloat(user.balance) || 0 
@@ -686,7 +686,7 @@ const AdminDashboard: React.FC = () => {
                             </button>
                             <button 
                               onClick={() => openTransactionModal(user, 'CREDIT')} 
-                              className="p-1.5 md:p-2 bg-emerald-500/20 text-emerald-400 rounded-lg hover:bg-emerald-500 hover:text-white transition-all"
+                              className="p-1.5 md:p-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all"
                               title={t('admin.credit')}
                             >
                               <PlusCircle className="h-4 w-4 md:h-5 md:w-5" />
@@ -821,7 +821,7 @@ const AdminDashboard: React.FC = () => {
                         </td>
                         <td className="px-3 md:px-6 py-3 md:py-4 text-white text-xs md:text-sm">
                            <div className="flex items-center gap-2">
-                             <div className={`p-1 rounded bg-opacity-20 shrink-0 ${isCredit ? 'bg-emerald-500 text-emerald-400' : 'bg-red-500 text-red-400'}`}>
+                             <div className={`p-1 rounded bg-opacity-20 shrink-0 ${isCredit ? 'bg-blue-500 text-blue-400' : 'bg-red-500 text-red-400'}`}>
                                {isCredit ? <ArrowDownLeft className="h-3 w-3 md:h-4 md:w-4" /> : <ArrowUpRight className="h-3 w-3 md:h-4 md:w-4" />}
                              </div>
                              <div className="min-w-0">
@@ -830,12 +830,12 @@ const AdminDashboard: React.FC = () => {
                              </div>
                            </div>
                         </td>
-                        <td className={`px-3 md:px-6 py-3 md:py-4 font-mono font-bold text-xs md:text-sm whitespace-nowrap ${isCredit ? 'text-emerald-400' : 'text-white'}`}>
+                        <td className={`px-3 md:px-6 py-3 md:py-4 font-mono font-bold text-xs md:text-sm whitespace-nowrap ${isCredit ? 'text-blue-400' : 'text-white'}`}>
                           {isCredit ? '+' : '-'} {transaction.amount.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} {CURRENCY}
                         </td>
                         <td className="px-3 md:px-6 py-3 md:py-4">
                           <span className={`px-2 py-1 rounded text-xs font-bold uppercase whitespace-nowrap ${
-                            transaction.status === 'COMPLETED' ? 'bg-emerald-500/20 text-emerald-400' :
+                            transaction.status === 'COMPLETED' ? 'bg-blue-500/20 text-blue-400' :
                             transaction.status === 'PENDING' ? 'bg-yellow-500/20 text-yellow-400' :
                             'bg-red-500/20 text-red-400'
                           }`}>
@@ -893,7 +893,7 @@ const AdminDashboard: React.FC = () => {
                                     <td className="px-6 py-3 text-gray-300 text-sm">
                                         {log.description}
                                     </td>
-                                    <td className="px-6 py-3 text-emerald-400 text-sm">
+                                    <td className="px-6 py-3 text-blue-400 text-sm">
                                         {log.targetUserName}
                                     </td>
                                 </tr>
@@ -918,7 +918,7 @@ const AdminDashboard: React.FC = () => {
               
               <h2 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
                 {transModal.type === 'CREDIT' ? (
-                  <PlusCircle className="text-emerald-400" />
+                  <PlusCircle className="text-blue-400" />
                 ) : (
                   <MinusCircle className="text-red-400" />
                 )}
@@ -926,7 +926,7 @@ const AdminDashboard: React.FC = () => {
               </h2>
               <p className="text-gray-400 text-sm mb-6">
                 {t('admin.client')} <span className="text-white font-bold">{transModal.userName}</span><br/>
-                {t('admin.currentBalance')} <span className="font-mono text-emerald-400">{transModal.currentBalance.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} {CURRENCY}</span>
+                {t('admin.currentBalance')} <span className="font-mono text-blue-400">{transModal.currentBalance.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} {CURRENCY}</span>
               </p>
 
               <form onSubmit={handleConfirmTransaction} className="space-y-4">
@@ -938,7 +938,7 @@ const AdminDashboard: React.FC = () => {
                     required
                     min="0.01"
                     step="0.01"
-                    className="w-full bg-slate-900 border border-slate-600 rounded-lg p-3 text-white focus:border-emerald-500 outline-none transition-all font-mono text-lg"
+                    className="w-full bg-slate-900 border border-slate-600 rounded-lg p-3 text-white focus:border-blue-500 outline-none transition-all font-mono text-lg"
                     value={amountInput}
                     onChange={e => setAmountInput(e.target.value)}
                     placeholder="0.00"
@@ -965,7 +965,7 @@ const AdminDashboard: React.FC = () => {
                     isProcessingTransaction
                       ? 'bg-gray-600 cursor-not-allowed opacity-50'
                       : transModal.type === 'CREDIT' 
-                        ? 'bg-emerald-500 hover:bg-emerald-600 shadow-emerald-500/20' 
+                        ? 'bg-blue-500 hover:bg-blue-600 shadow-blue-500/20' 
                         : 'bg-red-500 hover:bg-red-600 shadow-red-500/20'
                   }`}
                 >
@@ -1068,7 +1068,7 @@ const AdminDashboard: React.FC = () => {
                              <div className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border ${
                                  userDetailsModal.user.accountType === 'SAVINGS' 
                                  ? 'bg-yellow-500/10 text-yellow-500 border-yellow-500/50' 
-                                 : 'bg-emerald-500/10 text-emerald-500 border-emerald-500/50'
+                                 : 'bg-blue-500/10 text-blue-500 border-blue-500/50'
                              }`}>
                                  {userDetailsModal.user.accountType === 'SAVINGS' ? t('admin.accountSavings') : t('admin.accountCurrent')}
                              </div>
@@ -1132,14 +1132,14 @@ const AdminDashboard: React.FC = () => {
                           {/* Financial Section */}
                           <div>
                               <h3 className="text-white font-bold mb-4 flex items-center gap-2">
-                                  <CreditCard className="text-emerald-500 h-5 w-5" /> {t('admin.bankInfo')}
+                                  <CreditCard className="text-blue-500 h-5 w-5" /> {t('admin.bankInfo')}
                               </h3>
                               <div className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700">
                                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                       <div>
                                           <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">{t('admin.currentBalance')}</div>
                                           <div className="text-3xl font-mono font-bold text-white mb-4">
-                                              {userDetailsModal.user.balance.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} <span className="text-emerald-500">{CURRENCY}</span>
+                                              {userDetailsModal.user.balance.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} <span className="text-blue-500">{CURRENCY}</span>
                                           </div>
                                           <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">{t('admin.memberSince')}</div>
                                           <div className="text-white">

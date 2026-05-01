@@ -35,8 +35,8 @@ const TransactionSuccessModal: React.FC = () => {
         <div className="flex flex-col items-center text-center space-y-6">
           {/* Success Icon with Animation */}
           <div className="relative">
-            <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mb-2 animate-pulse">
-              <CheckCircle className="h-12 w-12 text-emerald-500" />
+            <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mb-2 animate-pulse">
+              <CheckCircle className="h-12 w-12 text-blue-500" />
             </div>
             <div className="absolute -top-2 -right-2">
               <Sparkles className="h-6 w-6 text-yellow-400 animate-bounce" />
@@ -68,7 +68,7 @@ const TransactionSuccessModal: React.FC = () => {
           {/* Continue Button */}
           <button
             onClick={closeTransactionSuccessModal}
-            className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-lg shadow-emerald-500/30 transform hover:scale-105 duration-200"
+            className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/30 transform hover:scale-105 duration-200"
           >
             {t('transactionSuccessModal.continue')}
           </button>

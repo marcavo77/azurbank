@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             </p>
             <button
               onClick={slide.action}
-              className="group bg-emerald-500 hover:bg-emerald-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all shadow-[0_0_20px_rgba(16,185,129,0.5)] flex items-center gap-2 w-auto"
+              className="group bg-blue-500 hover:bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold transition-all shadow-[0_0_20px_rgba(16,185,129,0.5)] flex items-center gap-2 w-auto"
             >
               {slide.cta}
               <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-2 sm:h-3 rounded-full transition-all touch-manipulation ${
-              index === currentSlide ? 'bg-emerald-500 w-6 sm:w-8' : 'bg-white/50 hover:bg-white w-2 sm:w-3'
+              index === currentSlide ? 'bg-blue-500 w-6 sm:w-8' : 'bg-white/50 hover:bg-white w-2 sm:w-3'
             }`}
             aria-label={`${t('hero.goToSlide')} ${index + 1}`}
           />

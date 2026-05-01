@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             className={`flex items-center ${!currentUser ? 'cursor-pointer' : ''} flex-shrink-0`} 
             onClick={() => !currentUser && setView('LANDING')}
           >
-            <div className="flex-shrink-0 text-emerald-400">
+            <div className="flex-shrink-0 text-blue-400">
               <ShieldCheck className="h-8 w-8" />
             </div>
             <div>
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                 <div className="flex items-center gap-4 ml-4">
                    <button 
                      onClick={toggleChat}
-                     className={`relative p-2 rounded-full transition-colors ${isChatOpen ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white'}`}
+                     className={`relative p-2 rounded-full transition-colors ${isChatOpen ? 'bg-blue-500 text-white' : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white'}`}
                      title={t('nav.messages')}
                    >
                       <MessageSquare className="h-5 w-5" />
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
                   </button>
                   <button
                     onClick={() => setView('REGISTER')}
-                    className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-all shadow-lg shadow-emerald-500/20"
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-all shadow-lg shadow-blue-500/20"
                   >
                     {t('nav.register')}
                   </button>
@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
             {!currentUser && (
                <button
                 onClick={() => setView('LOGIN')}
-                className="text-white bg-emerald-500 hover:bg-emerald-600 p-2 rounded-md transition-all shadow-lg shadow-emerald-500/20 border border-emerald-400/50 flex items-center justify-center"
+                className="text-white bg-blue-500 hover:bg-blue-600 p-2 rounded-md transition-all shadow-lg shadow-blue-500/20 border border-blue-400/50 flex items-center justify-center"
                 title={t('nav.login')}
                 aria-label={t('nav.login')}
               >
@@ -157,7 +157,7 @@ const Navbar: React.FC = () => {
                <>
                 <button
                   onClick={() => { setView('REGISTER'); setIsOpen(false); }}
-                  className="w-full text-left text-emerald-400 font-bold block px-3 py-2 rounded-md text-base border border-emerald-500/30 mt-2 bg-emerald-500/10"
+                  className="w-full text-left text-blue-400 font-bold block px-3 py-2 rounded-md text-base border border-blue-500/30 mt-2 bg-blue-500/10"
                 >
                   {t('nav.register')}
                 </button>

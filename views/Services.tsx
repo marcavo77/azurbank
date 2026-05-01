@@ -15,9 +15,9 @@ const Services: React.FC = () => {
       
       {/* Hero Section */}
       <div className="py-20 px-4 text-center relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px] -z-10"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] -z-10"></div>
         <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-          {t('services.title')} <span className="text-emerald-400">NovaBank</span>
+          {t('services.title')} <span className="text-blue-400">Azur Bank</span>
         </h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             {t('services.subtitle')}
@@ -38,9 +38,9 @@ const Services: React.FC = () => {
               { icon: RefreshCw, title: t('services.feature7.title'), desc: t('services.feature7.desc') },
               { icon: BarChart, title: t('services.feature8.title'), desc: t('services.feature8.desc') }
             ], [t, language]).map((service, idx) => (
-              <div key={idx} className="glass-panel p-8 rounded-2xl hover:bg-slate-700/50 transition-all duration-300 group cursor-default border border-slate-700 hover:border-emerald-500/30">
-                <div className="w-14 h-14 rounded-xl bg-slate-700/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-emerald-500/20">
-                  <service.icon className="h-7 w-7 text-emerald-400" />
+              <div key={idx} className="glass-panel p-8 rounded-2xl hover:bg-slate-700/50 transition-all duration-300 group cursor-default border border-slate-700 hover:border-blue-500/30">
+                <div className="w-14 h-14 rounded-xl bg-slate-700/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:bg-blue-500/20">
+                  <service.icon className="h-7 w-7 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed">{service.desc}</p>
@@ -54,11 +54,11 @@ const Services: React.FC = () => {
       <section className="py-24 px-4 relative">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
            <div className="flex-1 space-y-8">
-              <div className="inline-block px-4 py-2 bg-emerald-500/10 rounded-full border border-emerald-500/20 text-emerald-400 text-sm font-bold uppercase tracking-wider">
+              <div className="inline-block px-4 py-2 bg-blue-500/10 rounded-full border border-blue-500/20 text-blue-400 text-sm font-bold uppercase tracking-wider">
                 {t('services.userExperience')}
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                {t('services.ux.title')}<br/><span className="text-emerald-400">{t('services.ux.titleHighlight')}</span>.
+                {t('services.ux.title')}<br/><span className="text-blue-400">{t('services.ux.titleHighlight')}</span>.
               </h2>
               <p className="text-lg text-gray-400">
                 {t('services.ux.description')}
@@ -72,7 +72,7 @@ const Services: React.FC = () => {
                  ], [t, language]).map((item, i) => (
                    <div key={i} className="flex gap-4">
                       <div className="mt-1 w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0">
-                         <span className="text-emerald-400 font-bold">{i + 1}</span>
+                         <span className="text-blue-400 font-bold">{i + 1}</span>
                       </div>
                       <div>
                          <h4 className="text-white font-bold text-lg">{item.title}</h4>
@@ -84,7 +84,7 @@ const Services: React.FC = () => {
            </div>
            
            <div className="flex-1 relative">
-              <div className="absolute inset-0 bg-emerald-500/20 blur-[100px] rounded-full"></div>
+              <div className="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full"></div>
               {/* Mock App UI Visual */}
               <div className="relative z-10 bg-slate-900 border-8 border-slate-800 rounded-[2.5rem] p-4 shadow-2xl max-w-sm mx-auto rotate-[-5deg] hover:rotate-0 transition-transform duration-700">
                   <div className="bg-slate-800 rounded-[2rem] overflow-hidden h-[600px] flex flex-col relative">
@@ -93,7 +93,7 @@ const Services: React.FC = () => {
                          <div className="flex justify-between items-center text-white mb-6">
                             <div className="w-8 h-8 bg-slate-700 rounded-full"></div>
                             <div className="font-bold">{t('services.app.home')}</div>
-                            <div className="w-8 h-8 flex items-center justify-center"><Zap className="h-5 w-5 text-emerald-400"/></div>
+                            <div className="w-8 h-8 flex items-center justify-center"><Zap className="h-5 w-5 text-blue-400"/></div>
                          </div>
                          <div className="text-gray-400 text-sm">{t('services.app.balance')}</div>
                          <div className="text-4xl font-bold text-white">12 450,00 €</div>
@@ -101,8 +101,8 @@ const Services: React.FC = () => {
                       {/* Chart Area */}
                       <div className="h-32 bg-slate-900/50 flex items-end px-4 gap-2 pb-4">
                          {[40, 60, 35, 80, 50, 90, 70].map((h, i) => (
-                             <div key={i} className="flex-1 bg-emerald-500/20 rounded-t-sm relative group">
-                                <div className={`absolute bottom-0 left-0 right-0 bg-emerald-500 rounded-t-sm transition-all duration-1000`} style={{height: `${h}%`}}></div>
+                             <div key={i} className="flex-1 bg-blue-500/20 rounded-t-sm relative group">
+                                <div className={`absolute bottom-0 left-0 right-0 bg-blue-500 rounded-t-sm transition-all duration-1000`} style={{height: `${h}%`}}></div>
                              </div>
                          ))}
                       </div>
@@ -111,7 +111,7 @@ const Services: React.FC = () => {
                          {[
                              { name: "Starbucks", amount: "-4.50 €", icon: "☕️" },
                              { name: "Uber", amount: "-12.20 €", icon: "🚗" },
-                             { name: "Salaire", amount: "+3 200.00 €", icon: "💰", color: "text-emerald-400" },
+                             { name: "Salaire", amount: "+3 200.00 €", icon: "💰", color: "text-blue-400" },
                              { name: "Netflix", amount: "-15.99 €", icon: "🎬" },
                          ].map((item, i) => (
                              <div key={i} className="flex items-center justify-between p-3 bg-slate-700/30 rounded-xl">
@@ -135,7 +135,7 @@ const Services: React.FC = () => {
             <div className="flex-1 grid grid-cols-2 gap-4">
                <div className="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl h-48 lg:h-64 shadow-2xl border border-slate-600 p-6 flex flex-col justify-between transform rotate-3 hover:rotate-6 transition-transform">
                   <div className="flex justify-between items-start">
-                     <div className="text-emerald-400 font-bold italic">NovaBank</div>
+                     <div className="text-blue-400 font-bold italic">Azur Bank</div>
                      <Wifi className="text-gray-500 h-6 w-6 rotate-90" />
                   </div>
                   <div className="flex items-center gap-2">
@@ -147,16 +147,16 @@ const Services: React.FC = () => {
                      <div className="text-white text-sm font-bold">ALEXANDRE V</div>
                   </div>
                </div>
-               <div className="bg-gradient-to-br from-emerald-900 to-slate-900 rounded-2xl h-48 lg:h-64 shadow-2xl border border-emerald-700 p-6 flex flex-col justify-between transform -rotate-3 hover:-rotate-6 transition-transform mt-8">
+               <div className="bg-gradient-to-br from-blue-900 to-slate-900 rounded-2xl h-48 lg:h-64 shadow-2xl border border-blue-700 p-6 flex flex-col justify-between transform -rotate-3 hover:-rotate-6 transition-transform mt-8">
                   <div className="flex justify-between items-start">
-                     <div className="text-white font-bold italic">Nova<span className="text-emerald-400">Metal</span></div>
-                     <Wifi className="text-emerald-500/50 h-6 w-6 rotate-90" />
+                     <div className="text-white font-bold italic">Nova<span className="text-blue-400">Metal</span></div>
+                     <Wifi className="text-blue-500/50 h-6 w-6 rotate-90" />
                   </div>
                   <div className="flex items-center gap-2">
                      <div className="w-10 h-7 bg-slate-400/30 rounded flex items-center justify-center border border-slate-400/30"></div>
                   </div>
                   <div>
-                     <div className="text-emerald-400/50 text-xs font-mono mb-1">•••• 8888</div>
+                     <div className="text-blue-400/50 text-xs font-mono mb-1">•••• 8888</div>
                      <div className="text-white text-sm font-bold">ALEXANDRE V</div>
                   </div>
                </div>
@@ -193,7 +193,7 @@ const Services: React.FC = () => {
 
       {/* Feature Section 3: Investments */}
       <section className="py-24 px-4 bg-slate-800/30 relative">
-         <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-emerald-900/10 to-transparent"></div>
+         <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-blue-900/10 to-transparent"></div>
          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
             <div className="flex-1 space-y-8">
                <div className="inline-block px-4 py-2 bg-yellow-500/10 rounded-full border border-yellow-500/20 text-yellow-400 text-sm font-bold uppercase tracking-wider">
@@ -213,7 +213,7 @@ const Services: React.FC = () => {
                      t('services.investment.feature4')
                   ].map((item, i) => (
                      <li key={i} className="flex items-center gap-3 text-gray-300">
-                        <Check className="h-5 w-5 text-emerald-500" />
+                        <Check className="h-5 w-5 text-blue-500" />
                         {item}
                      </li>
                   ))}
@@ -229,7 +229,7 @@ const Services: React.FC = () => {
                         <div className="text-gray-400 text-sm uppercase mb-1">{t('services.investment.portfolioTotal')}</div>
                         <div className="text-4xl font-bold text-white">45 231,89 €</div>
                      </div>
-                     <div className="text-emerald-400 font-bold flex items-center gap-1 bg-emerald-500/10 px-3 py-1 rounded-lg">
+                     <div className="text-blue-400 font-bold flex items-center gap-1 bg-blue-500/10 px-3 py-1 rounded-lg">
                         <TrendingUp className="h-4 w-4" /> +12.4%
                      </div>
                   </div>
@@ -246,7 +246,7 @@ const Services: React.FC = () => {
                         </div>
                         <div className="text-right">
                            <div className="text-white font-bold">2 450 €</div>
-                           <div className="text-xs text-emerald-400">+5.2%</div>
+                           <div className="text-xs text-blue-400">+5.2%</div>
                         </div>
                      </div>
                      
@@ -260,7 +260,7 @@ const Services: React.FC = () => {
                         </div>
                         <div className="text-right">
                            <div className="text-white font-bold">1 200 €</div>
-                           <div className="text-xs text-emerald-400">+2.1%</div>
+                           <div className="text-xs text-blue-400">+2.1%</div>
                         </div>
                      </div>
 
@@ -287,14 +287,14 @@ const Services: React.FC = () => {
       <section className="py-24 px-4">
          <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white text-center mb-16">
-               {t('services.comparison.title')} <span className="text-emerald-400">NovaBank</span> ?
+               {t('services.comparison.title')} <span className="text-blue-400">Azur Bank</span> ?
             </h2>
 
             <div className="glass-panel rounded-3xl overflow-hidden border border-slate-700">
                <div className="grid grid-cols-3 bg-slate-800/50 p-6 border-b border-slate-700">
                   <div className="text-gray-400 font-bold uppercase text-xs tracking-wider pt-2">{t('services.comparison.comparison')}</div>
-                  <div className="text-center text-xl font-bold text-emerald-400 flex items-center justify-center gap-2">
-                     <Shield className="h-6 w-6" /> NovaBank
+                  <div className="text-center text-xl font-bold text-blue-400 flex items-center justify-center gap-2">
+                     <Shield className="h-6 w-6" /> Azur Bank
                   </div>
                   <div className="text-center text-xl font-bold text-gray-500">{t('services.comparison.classicBank')}</div>
                </div>
@@ -311,7 +311,7 @@ const Services: React.FC = () => {
                      <div key={i} className="grid grid-cols-3 p-6 hover:bg-slate-800/30 transition-colors">
                         <div className="text-gray-300 font-medium flex items-center">{row.feature}</div>
                         <div className="text-center text-white font-bold text-lg flex justify-center items-center gap-2">
-                           <Check className="h-4 w-4 text-emerald-500" /> {row.nova}
+                           <Check className="h-4 w-4 text-blue-500" /> {row.nova}
                         </div>
                         <div className="text-center text-gray-500 flex justify-center items-center gap-2">
                            {row.old === "Impossible" ? <XIcon className="h-4 w-4 text-red-500" /> : null} {row.old}
@@ -340,7 +340,7 @@ const Services: React.FC = () => {
 
       {/* Final CTA */}
       <section className="py-24 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-emerald-900/20 z-0"></div>
+        <div className="absolute inset-0 bg-blue-900/20 z-0"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">{t('services.cta.title')}</h2>
            <p className="text-xl text-gray-300 mb-12">
@@ -349,7 +349,7 @@ const Services: React.FC = () => {
            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button 
                 onClick={() => setView('REGISTER')}
-                className="px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold rounded-full shadow-xl shadow-emerald-500/30 transition-all hover:scale-105"
+                className="px-10 py-4 bg-blue-500 hover:bg-blue-600 text-white text-lg font-bold rounded-full shadow-xl shadow-blue-500/30 transition-all hover:scale-105"
               >
                 {t('services.cta.openAccount')}
               </button>

@@ -65,7 +65,7 @@ const LanguageSelector: React.FC = () => {
                         }}
                         className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition-colors text-sm ${
                             language === lang.code 
-                            ? 'bg-emerald-500/20 text-emerald-400' 
+                            ? 'bg-blue-500/20 text-blue-400' 
                             : 'text-gray-300 hover:bg-slate-700 hover:text-white'
                         }`}
                     >

@@ -104,7 +104,7 @@ export default async function handler(
       subject: `Nouveau message de contact - ${safeFirstName} ${safeLastName} (${safeEmail})`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #10b981; border-bottom: 2px solid #10b981; padding-bottom: 10px;">
+          <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">
             Nouveau message depuis le formulaire de contact
           </h2>
           
@@ -114,7 +114,7 @@ export default async function handler(
             <p><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
           </div>
           
-          <div style="background-color: #ffffff; padding: 20px; border-left: 4px solid #10b981; margin: 20px 0;">
+          <div style="background-color: #ffffff; padding: 20px; border-left: 4px solid #2563eb; margin: 20px 0;">
             <h3 style="color: #1f2937; margin-top: 0;">Message:</h3>
             <p style="color: #4b5563; white-space: pre-wrap; line-height: 1.6;">${safeMessage}</p>
           </div>

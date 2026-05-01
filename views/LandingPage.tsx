@@ -82,19 +82,19 @@ const LandingPage: React.FC = () => {
       <section className="relative z-10 -mt-20 px-4">
         <div className="max-w-7xl mx-auto glass-panel p-8 rounded-2xl shadow-2xl grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-white/10">
           <div>
-            <div className="text-4xl font-bold text-emerald-400 mb-1">2M+</div>
+            <div className="text-4xl font-bold text-blue-400 mb-1">2M+</div>
             <div className="text-gray-400 text-sm uppercase tracking-wider">{t('stats.clients')}</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-emerald-400 mb-1">150+</div>
+            <div className="text-4xl font-bold text-blue-400 mb-1">150+</div>
             <div className="text-gray-400 text-sm uppercase tracking-wider">{t('stats.countries')}</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-emerald-400 mb-1">5Md€</div>
+            <div className="text-4xl font-bold text-blue-400 mb-1">5Md€</div>
             <div className="text-gray-400 text-sm uppercase tracking-wider">{t('stats.transactions')}</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-emerald-400 mb-1">24/7</div>
+            <div className="text-4xl font-bold text-blue-400 mb-1">24/7</div>
             <div className="text-gray-400 text-sm uppercase tracking-wider">{t('stats.support')}</div>
           </div>
         </div>
@@ -102,7 +102,7 @@ const LandingPage: React.FC = () => {
 
       {/* Feature Highlight */}
       <section className="py-24 px-4 relative">
-        <div className="absolute top-1/4 left-0 w-1/3 h-1/2 bg-emerald-500/10 blur-[100px] rounded-full"></div>
+        <div className="absolute top-1/4 left-0 w-1/3 h-1/2 bg-blue-500/10 blur-[100px] rounded-full"></div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{t('features.title')}</h2>
@@ -112,22 +112,22 @@ const LandingPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-panel p-8 rounded-2xl hover:bg-slate-800/80 transition-all border border-slate-700 hover:border-emerald-500/50 group">
-              <div className="w-14 h-14 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 text-emerald-400 group-hover:scale-110 transition-transform">
+            <div className="glass-panel p-8 rounded-2xl hover:bg-slate-800/80 transition-all border border-slate-700 hover:border-blue-500/50 group">
+              <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
                 <Globe className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{t('features.Borderless')}</h3>
               <p className="text-gray-400">{t('features.Borderless.desc')}</p>
             </div>
-            <div className="glass-panel p-8 rounded-2xl hover:bg-slate-800/80 transition-all border border-slate-700 hover:border-emerald-500/50 group">
-              <div className="w-14 h-14 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 text-emerald-400 group-hover:scale-110 transition-transform">
+            <div className="glass-panel p-8 rounded-2xl hover:bg-slate-800/80 transition-all border border-slate-700 hover:border-blue-500/50 group">
+              <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
                 <ShieldCheck className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{t('features.Security')}</h3>
               <p className="text-gray-400">{t('features.Security.desc')}</p>
             </div>
-            <div className="glass-panel p-8 rounded-2xl hover:bg-slate-800/80 transition-all border border-slate-700 hover:border-emerald-500/50 group">
-              <div className="w-14 h-14 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 text-emerald-400 group-hover:scale-110 transition-transform">
+            <div className="glass-panel p-8 rounded-2xl hover:bg-slate-800/80 transition-all border border-slate-700 hover:border-blue-500/50 group">
+              <div className="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
                 <TrendingUp className="h-7 w-7" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{t('features.Analytics')}</h3>
@@ -138,7 +138,7 @@ const LandingPage: React.FC = () => {
           <div className="text-center mt-12">
             <button 
               onClick={() => setView('SERVICES')}
-              className="text-emerald-400 font-semibold hover:text-emerald-300 flex items-center gap-2 mx-auto"
+              className="text-blue-400 font-semibold hover:text-blue-300 flex items-center gap-2 mx-auto"
             >
               {t('features.cta')} <ArrowRight className="h-4 w-4" />
             </button>
@@ -148,7 +148,7 @@ const LandingPage: React.FC = () => {
 
       {/* Team Section */}
       <section className="py-24 px-4 bg-slate-900 relative overflow-hidden border-t border-slate-800">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[100px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px]"></div>
         <div className="max-w-7xl mx-auto relative z-10">
            <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{t('team.title')}</h2>
@@ -181,17 +181,17 @@ const LandingPage: React.FC = () => {
               }
             ], [t, language]).map((member, i) => (
                <div key={i} className="group relative">
-                  <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 group-hover:border-emerald-500/50 transition-all shadow-2xl">
+                  <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 group-hover:border-blue-500/50 transition-all shadow-2xl">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform">
-                       <div className="text-emerald-400 font-bold text-sm mb-1">{member.role}</div>
+                       <div className="text-blue-400 font-bold text-sm mb-1">{member.role}</div>
                        <div className="text-white font-bold text-xl">{member.name}</div>
                     </div>
                   </div>
                   {/* Badge Effect */}
                   <div className="absolute top-4 right-4 bg-slate-900/80 backdrop-blur p-2 rounded-lg border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
-                     <ShieldCheck className="h-4 w-4 text-emerald-500" />
+                     <ShieldCheck className="h-4 w-4 text-blue-500" />
                   </div>
                </div>
             ))}
@@ -209,7 +209,7 @@ const LandingPage: React.FC = () => {
                   {t('impact.subtitle')}
                 </p>
              </div>
-             <button onClick={() => setView('ABOUT')} className="px-6 py-3 rounded-xl border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 transition-colors font-bold whitespace-nowrap">
+             <button onClick={() => setView('ABOUT')} className="px-6 py-3 rounded-xl border border-blue-500/30 text-blue-400 hover:bg-blue-500/10 transition-colors font-bold whitespace-nowrap">
                 {t('impact.cta')}
              </button>
           </div>
@@ -217,7 +217,7 @@ const LandingPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
              
              {/* Card 1: Strategic Partnership */}
-             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-emerald-500/50 transition-colors">
+             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-blue-500/50 transition-colors">
                 {/* The Image */}
                 <div className="absolute inset-0">
                    <img 
@@ -231,7 +231,7 @@ const LandingPage: React.FC = () => {
                 {/* DIGITALLY BRANDED T-SHIRT EFFECT - Man on the right */}
                 {/* We overlay the NovaBank logo on the person's chest area */}
                 <div className="absolute top-[45%] right-[25%] transform -translate-y-1/2 w-20 flex flex-col items-center opacity-90 rotate-[-5deg] mix-blend-hard-light filter brightness-110">
-                    <ShieldCheck className="text-emerald-400 h-8 w-8 drop-shadow-md" strokeWidth={2.5} />
+                    <ShieldCheck className="text-blue-400 h-8 w-8 drop-shadow-md" strokeWidth={2.5} />
                     <span className="text-white font-bold text-[10px] tracking-widest drop-shadow-md mt-1 font-sans">NOVABANK</span>
                 </div>
 
@@ -245,7 +245,7 @@ const LandingPage: React.FC = () => {
              </div>
 
              {/* Card 2: Charity Donation */}
-             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-emerald-500/50 transition-colors">
+             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-blue-500/50 transition-colors">
                 <div className="absolute inset-0">
                    <img 
                       src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
@@ -257,10 +257,10 @@ const LandingPage: React.FC = () => {
 
                 {/* DIGITALLY BRANDED T-SHIRT EFFECT - Woman in center */}
                 <div className="absolute top-[55%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-24 flex flex-col items-center opacity-85 rotate-[2deg] mix-blend-screen">
-                     <div className="bg-emerald-600/80 p-1 rounded-full mb-1">
+                     <div className="bg-blue-600/80 p-1 rounded-full mb-1">
                         <ShieldCheck className="text-white h-6 w-6" />
                      </div>
-                    <span className="text-emerald-300 font-black text-[12px] tracking-tighter drop-shadow-lg font-sans bg-slate-900/30 px-2 rounded">NOVABANK</span>
+                    <span className="text-blue-300 font-black text-[12px] tracking-tighter drop-shadow-lg font-sans bg-slate-900/30 px-2 rounded">NOVABANK</span>
                     <span className="text-white text-[8px] uppercase tracking-widest">Foundation</span>
                 </div>
 
@@ -274,7 +274,7 @@ const LandingPage: React.FC = () => {
              </div>
 
              {/* Card 3: Education */}
-             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-emerald-500/50 transition-colors">
+             <div className="group rounded-3xl overflow-hidden relative h-[400px] border border-slate-800 hover:border-blue-500/50 transition-colors">
                 <div className="absolute inset-0">
                    <img 
                       src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
@@ -309,7 +309,7 @@ const LandingPage: React.FC = () => {
           <div className="flex-1 space-y-8">
             <h2 className="text-4xl font-bold text-white leading-tight">
               {t('app.title')} <br/>
-              <span className="text-emerald-400">{t('app.title.highlight')}</span>
+              <span className="text-blue-400">{t('app.title.highlight')}</span>
             </h2>
             <p className="text-lg text-gray-400">
               {t('app.desc')}
@@ -317,8 +317,8 @@ const LandingPage: React.FC = () => {
             <ul className="space-y-4">
               {[t('app.feature1'), t('app.feature2'), t('app.feature3'), t('app.feature4')].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-300">
-                  <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                    <Check className="h-3 w-3 text-emerald-400" />
+                  <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center">
+                    <Check className="h-3 w-3 text-blue-400" />
                   </div>
                   {item}
                 </li>
@@ -333,7 +333,7 @@ const LandingPage: React.FC = () => {
             </button>
           </div>
           <div className="flex-1 relative">
-             <div className="absolute inset-0 bg-emerald-500/20 blur-[80px] rounded-full"></div>
+             <div className="absolute inset-0 bg-blue-500/20 blur-[80px] rounded-full"></div>
              <div className="relative z-10 bg-slate-900 border-8 border-slate-800 rounded-[3rem] shadow-2xl p-2 max-w-xs mx-auto rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="bg-slate-800 rounded-[2.5rem] overflow-hidden h-[500px] w-full relative">
                   {/* Mock Phone UI */}
@@ -364,7 +364,7 @@ const LandingPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-left">
             <div className="glass-panel p-8 rounded-2xl border-t-4 border-gray-500">
               <h3 className="text-xl font-bold text-white">{t('pricing.std')}</h3>
-              <div className="text-3xl font-bold text-emerald-400 my-4">0 €<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
+              <div className="text-3xl font-bold text-blue-400 my-4">0 €<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
               <ul className="space-y-3 mb-8 text-gray-400 text-sm">
                 <li>✓ {t('pricing.std.feature1')}</li>
                 <li>✓ {t('pricing.std.feature2')}</li>
@@ -372,19 +372,19 @@ const LandingPage: React.FC = () => {
               </ul>
               <button onClick={() => setView('REGISTER')} className="w-full py-3 bg-slate-700 text-white rounded-lg font-bold hover:bg-slate-600">{t('pricing.choose')}</button>
             </div>
-            <div className="glass-panel p-8 rounded-2xl border-t-4 border-emerald-500 transform scale-105 shadow-xl shadow-emerald-500/10 z-10 bg-slate-800">
+            <div className="glass-panel p-8 rounded-2xl border-t-4 border-blue-500 transform scale-105 shadow-xl shadow-blue-500/10 z-10 bg-slate-800">
               <h3 className="text-xl font-bold text-white">{t('pricing.prem')}</h3>
-              <div className="text-3xl font-bold text-emerald-400 my-4">9.99 €<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
+              <div className="text-3xl font-bold text-blue-400 my-4">9.99 €<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
               <ul className="space-y-3 mb-8 text-gray-400 text-sm">
                 <li className="text-white">✓ {t('pricing.prem.feature1')}</li>
                 <li className="text-white">✓ {t('pricing.prem.feature2')}</li>
                 <li className="text-white">✓ {t('pricing.prem.feature3')}</li>
               </ul>
-              <button onClick={() => setView('REGISTER')} className="w-full py-3 bg-emerald-500 text-white rounded-lg font-bold hover:bg-emerald-600">{t('pricing.choose')}</button>
+              <button onClick={() => setView('REGISTER')} className="w-full py-3 bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600">{t('pricing.choose')}</button>
             </div>
             <div className="glass-panel p-8 rounded-2xl border-t-4 border-yellow-500">
               <h3 className="text-xl font-bold text-white">{t('pricing.elite')}</h3>
-              <div className="text-3xl font-bold text-emerald-400 my-4">16.99 €<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
+              <div className="text-3xl font-bold text-blue-400 my-4">16.99 €<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
               <ul className="space-y-3 mb-8 text-gray-400 text-sm">
                 <li>✓ {t('pricing.elite.feature1')}</li>
                 <li>✓ {t('pricing.elite.feature2')}</li>
@@ -413,12 +413,12 @@ const LandingPage: React.FC = () => {
             {testimonials.map((testimonial, i) => (
               <div key={i} className="glass-panel p-8 rounded-2xl relative">
                 <div className="absolute -top-6 left-8">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full border-2 border-emerald-500 shadow-lg" />
+                  <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full border-2 border-blue-500 shadow-lg" />
                 </div>
                 <p className="text-gray-300 italic mb-6 mt-4">"{testimonial.content}"</p>
                 <div>
                   <div className="text-white font-bold">{testimonial.name}</div>
-                  <div className="text-emerald-400 text-sm">{testimonial.role}</div>
+                  <div className="text-blue-400 text-sm">{testimonial.role}</div>
                 </div>
               </div>
             ))}
@@ -429,8 +429,8 @@ const LandingPage: React.FC = () => {
       {/* Security Section */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="w-20 h-20 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-8">
-            <Lock className="h-10 w-10 text-emerald-400" />
+          <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-8">
+            <Lock className="h-10 w-10 text-blue-400" />
           </div>
           <h2 className="text-3xl font-bold text-white mb-6">{t('security.title')}</h2>
           <p className="text-gray-400 text-lg mb-8">
@@ -448,7 +448,7 @@ const LandingPage: React.FC = () => {
       <section className="py-24 px-4 bg-slate-800/30">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center flex items-center justify-center gap-3">
-            <HelpCircle className="h-8 w-8 text-emerald-400" />
+            <HelpCircle className="h-8 w-8 text-blue-400" />
             {t('faq.title')}
           </h2>
           <div className="space-y-6">
@@ -464,15 +464,15 @@ const LandingPage: React.FC = () => {
 
       {/* Final CTA */}
       <section className="py-24 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/40 to-slate-900/40 z-0"></div>
-        <div className="max-w-5xl mx-auto text-center relative z-10 glass-panel p-12 rounded-3xl border border-emerald-500/30 shadow-[0_0_50px_rgba(16,185,129,0.2)]">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-slate-900/40 z-0"></div>
+        <div className="max-w-5xl mx-auto text-center relative z-10 glass-panel p-12 rounded-3xl border border-blue-500/30 shadow-[0_0_50px_rgba(16,185,129,0.2)]">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('cta.title')}</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
             {t('cta.desc')}
           </p>
           <button 
             onClick={() => setView('REGISTER')}
-            className="bg-emerald-500 hover:bg-emerald-600 text-white px-10 py-5 rounded-full text-xl font-bold transition-all shadow-xl shadow-emerald-500/30 hover:scale-105"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-10 py-5 rounded-full text-xl font-bold transition-all shadow-xl shadow-blue-500/30 hover:scale-105"
           >
             {t('cta.button')}
           </button>

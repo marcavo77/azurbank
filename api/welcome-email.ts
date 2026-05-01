@@ -16,10 +16,10 @@ function escapeHtml(text: string): string {
 // Translations for welcome email (to be replaced with translations.ts import if needed)
 const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
   fr: {
-    subject: 'Bienvenue chez NovaBank - Votre compte a été créé avec succès',
+    subject: 'Bienvenue chez Azur Bank - Votre compte a été créé avec succès',
     greeting: 'Bonjour',
-    title: 'Bienvenue chez NovaBank !',
-    message1: 'Félicitations ! Votre compte NovaBank a été créé avec succès.',
+    title: 'Bienvenue chez Azur Bank !',
+    message1: 'Félicitations ! Votre compte Azur Bank a été créé avec succès.',
     message2: 'Vous pouvez maintenant accéder à votre espace client et profiter de tous nos services bancaires innovants.',
     message3: 'Voici quelques informations importantes concernant votre compte :',
     accountCreated: 'Votre compte a été créé avec succès',
@@ -29,14 +29,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'Besoin d\'aide ?',
     supportDesc: 'Notre équipe est là pour vous accompagner. N\'hésitez pas à nous contacter si vous avez des questions.',
     footer: 'Cordialement,',
-    footerTeam: 'L\'équipe NovaBank',
+    footerTeam: 'L\'équipe Azur Bank',
     footerNote: 'Cet email a été envoyé automatiquement. Veuillez ne pas répondre à cet email.'
   },
   en: {
-    subject: 'Welcome to NovaBank - Your account has been successfully created',
+    subject: 'Welcome to Azur Bank - Your account has been successfully created',
     greeting: 'Hello',
-    title: 'Welcome to NovaBank!',
-    message1: 'Congratulations! Your NovaBank account has been successfully created.',
+    title: 'Welcome to Azur Bank!',
+    message1: 'Congratulations! Your Azur Bank account has been successfully created.',
     message2: 'You can now access your client area and enjoy all our innovative banking services.',
     message3: 'Here are some important information about your account:',
     accountCreated: 'Your account has been successfully created',
@@ -46,14 +46,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'Need Help?',
     supportDesc: 'Our team is here to assist you. Feel free to contact us if you have any questions.',
     footer: 'Best regards,',
-    footerTeam: 'The NovaBank Team',
+    footerTeam: 'The Azur Bank Team',
     footerNote: 'This email was sent automatically. Please do not reply to this email.'
   },
   es: {
-    subject: 'Bienvenido a NovaBank - Su cuenta ha sido creada con éxito',
+    subject: 'Bienvenido a Azur Bank - Su cuenta ha sido creada con éxito',
     greeting: 'Hola',
-    title: '¡Bienvenido a NovaBank!',
-    message1: '¡Felicitaciones! Su cuenta de NovaBank ha sido creada con éxito.',
+    title: '¡Bienvenido a Azur Bank!',
+    message1: '¡Felicitaciones! Su cuenta de Azur Bank ha sido creada con éxito.',
     message2: 'Ahora puede acceder a su área de cliente y disfrutar de todos nuestros servicios bancarios innovadores.',
     message3: 'Aquí hay información importante sobre su cuenta:',
     accountCreated: 'Su cuenta ha sido creada con éxito',
@@ -63,14 +63,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: '¿Necesita ayuda?',
     supportDesc: 'Nuestro equipo está aquí para ayudarle. No dude en contactarnos si tiene alguna pregunta.',
     footer: 'Saludos cordiales,',
-    footerTeam: 'El equipo de NovaBank',
+    footerTeam: 'El equipo de Azur Bank',
     footerNote: 'Este correo electrónico fue enviado automáticamente. Por favor, no responda a este correo.'
   },
   de: {
-    subject: 'Willkommen bei NovaBank - Ihr Konto wurde erfolgreich erstellt',
+    subject: 'Willkommen bei Azur Bank - Ihr Konto wurde erfolgreich erstellt',
     greeting: 'Hallo',
-    title: 'Willkommen bei NovaBank!',
-    message1: 'Herzlichen Glückwunsch! Ihr NovaBank-Konto wurde erfolgreich erstellt.',
+    title: 'Willkommen bei Azur Bank!',
+    message1: 'Herzlichen Glückwunsch! Ihr Azur Bank-Konto wurde erfolgreich erstellt.',
     message2: 'Sie können jetzt auf Ihren Kundenbereich zugreifen und alle unsere innovativen Bankdienstleistungen nutzen.',
     message3: 'Hier sind wichtige Informationen zu Ihrem Konto:',
     accountCreated: 'Ihr Konto wurde erfolgreich erstellt',
@@ -80,14 +80,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'Brauchen Sie Hilfe?',
     supportDesc: 'Unser Team steht Ihnen zur Verfügung. Kontaktieren Sie uns gerne, wenn Sie Fragen haben.',
     footer: 'Mit freundlichen Grüßen,',
-    footerTeam: 'Das NovaBank Team',
+    footerTeam: 'Das Azur Bank Team',
     footerNote: 'Diese E-Mail wurde automatisch gesendet. Bitte antworten Sie nicht auf diese E-Mail.'
   },
   it: {
-    subject: 'Benvenuto in NovaBank - Il tuo account è stato creato con successo',
+    subject: 'Benvenuto in Azur Bank - Il tuo account è stato creato con successo',
     greeting: 'Ciao',
-    title: 'Benvenuto in NovaBank!',
-    message1: 'Congratulazioni! Il tuo account NovaBank è stato creato con successo.',
+    title: 'Benvenuto in Azur Bank!',
+    message1: 'Congratulazioni! Il tuo account Azur Bank è stato creato con successo.',
     message2: 'Ora puoi accedere alla tua area clienti e godere di tutti i nostri servizi bancari innovativi.',
     message3: 'Ecco alcune informazioni importanti sul tuo account:',
     accountCreated: 'Il tuo account è stato creato con successo',
@@ -97,14 +97,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'Hai bisogno di aiuto?',
     supportDesc: 'Il nostro team è qui per assisterti. Non esitare a contattarci se hai domande.',
     footer: 'Cordiali saluti,',
-    footerTeam: 'Il team NovaBank',
+    footerTeam: 'Il team Azur Bank',
     footerNote: 'Questa email è stata inviata automaticamente. Si prega di non rispondere a questa email.'
   },
   pt: {
-    subject: 'Bem-vindo ao NovaBank - Sua conta foi criada com sucesso',
+    subject: 'Bem-vindo ao Azur Bank - Sua conta foi criada com sucesso',
     greeting: 'Olá',
-    title: 'Bem-vindo ao NovaBank!',
-    message1: 'Parabéns! Sua conta NovaBank foi criada com sucesso.',
+    title: 'Bem-vindo ao Azur Bank!',
+    message1: 'Parabéns! Sua conta Azur Bank foi criada com sucesso.',
     message2: 'Agora você pode acessar sua área de cliente e desfrutar de todos os nossos serviços bancários inovadores.',
     message3: 'Aqui estão algumas informações importantes sobre sua conta:',
     accountCreated: 'Sua conta foi criada com sucesso',
@@ -114,14 +114,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'Precisa de ajuda?',
     supportDesc: 'Nossa equipe está aqui para ajudá-lo. Sinta-se à vontade para nos contatar se tiver alguma dúvida.',
     footer: 'Atenciosamente,',
-    footerTeam: 'A equipe NovaBank',
+    footerTeam: 'A equipe Azur Bank',
     footerNote: 'Este e-mail foi enviado automaticamente. Por favor, não responda a este e-mail.'
   },
   nl: {
-    subject: 'Welkom bij NovaBank - Uw account is succesvol aangemaakt',
+    subject: 'Welkom bij Azur Bank - Uw account is succesvol aangemaakt',
     greeting: 'Hallo',
-    title: 'Welkom bij NovaBank!',
-    message1: 'Gefeliciteerd! Uw NovaBank-account is succesvol aangemaakt.',
+    title: 'Welkom bij Azur Bank!',
+    message1: 'Gefeliciteerd! Uw Azur Bank-account is succesvol aangemaakt.',
     message2: 'U kunt nu toegang krijgen tot uw klantenruimte en genieten van al onze innovatieve bankdiensten.',
     message3: 'Hier is belangrijke informatie over uw account:',
     accountCreated: 'Uw account is succesvol aangemaakt',
@@ -131,14 +131,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'Hulp nodig?',
     supportDesc: 'Ons team staat klaar om u te helpen. Neem gerust contact met ons op als u vragen heeft.',
     footer: 'Met vriendelijke groet,',
-    footerTeam: 'Het NovaBank Team',
+    footerTeam: 'Het Azur Bank Team',
     footerNote: 'Deze e-mail is automatisch verzonden. Gelieve niet te antwoorden op deze e-mail.'
   },
   ru: {
-    subject: 'Добро пожаловать в NovaBank - Ваш счет успешно создан',
+    subject: 'Добро пожаловать в Azur Bank - Ваш счет успешно создан',
     greeting: 'Здравствуйте',
-    title: 'Добро пожаловать в NovaBank!',
-    message1: 'Поздравляем! Ваш счет NovaBank успешно создан.',
+    title: 'Добро пожаловать в Azur Bank!',
+    message1: 'Поздравляем! Ваш счет Azur Bank успешно создан.',
     message2: 'Теперь вы можете получить доступ к своей клиентской зоне и пользоваться всеми нашими инновационными банковскими услугами.',
     message3: 'Вот важная информация о вашем счете:',
     accountCreated: 'Ваш счет успешно создан',
@@ -148,14 +148,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'Нужна помощь?',
     supportDesc: 'Наша команда готова помочь вам. Не стесняйтесь обращаться к нам, если у вас есть вопросы.',
     footer: 'С уважением,',
-    footerTeam: 'Команда NovaBank',
+    footerTeam: 'Команда Azur Bank',
     footerNote: 'Это письмо было отправлено автоматически. Пожалуйста, не отвечайте на это письмо.'
   },
   zh: {
-    subject: '欢迎加入 NovaBank - 您的账户已成功创建',
+    subject: '欢迎加入 Azur Bank - 您的账户已成功创建',
     greeting: '您好',
-    title: '欢迎加入 NovaBank！',
-    message1: '恭喜！您的 NovaBank 账户已成功创建。',
+    title: '欢迎加入 Azur Bank！',
+    message1: '恭喜！您的 Azur Bank 账户已成功创建。',
     message2: '您现在可以访问您的客户区域并享受我们所有创新的银行服务。',
     message3: '以下是您账户的重要信息：',
     accountCreated: '您的账户已成功创建',
@@ -165,14 +165,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: '需要帮助？',
     supportDesc: '我们的团队随时为您提供帮助。如果您有任何问题，请随时与我们联系。',
     footer: '此致敬礼，',
-    footerTeam: 'NovaBank 团队',
+    footerTeam: 'Azur Bank 团队',
     footerNote: '此邮件是自动发送的。请不要回复此邮件。'
   },
   ja: {
-    subject: 'NovaBankへようこそ - アカウントが正常に作成されました',
+    subject: 'Azur Bankへようこそ - アカウントが正常に作成されました',
     greeting: 'こんにちは',
-    title: 'NovaBankへようこそ！',
-    message1: 'おめでとうございます！NovaBankアカウントが正常に作成されました。',
+    title: 'Azur Bankへようこそ！',
+    message1: 'おめでとうございます！Azur Bankアカウントが正常に作成されました。',
     message2: 'これで、クライアントエリアにアクセスし、革新的な銀行サービスをすべて利用できます。',
     message3: 'アカウントに関する重要な情報は以下のとおりです：',
     accountCreated: 'アカウントが正常に作成されました',
@@ -182,14 +182,14 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'サポートが必要ですか？',
     supportDesc: '私たちのチームがサポートいたします。ご質問がございましたら、お気軽にお問い合わせください。',
     footer: '敬具、',
-    footerTeam: 'NovaBankチーム',
+    footerTeam: 'Azur Bankチーム',
     footerNote: 'このメールは自動送信されました。このメールに返信しないでください。'
   },
   ar: {
-    subject: 'مرحباً بك في NovaBank - تم إنشاء حسابك بنجاح',
+    subject: 'مرحباً بك في Azur Bank - تم إنشاء حسابك بنجاح',
     greeting: 'مرحباً',
-    title: 'مرحباً بك في NovaBank!',
-    message1: 'تهانينا! تم إنشاء حساب NovaBank الخاص بك بنجاح.',
+    title: 'مرحباً بك في Azur Bank!',
+    message1: 'تهانينا! تم إنشاء حساب Azur Bank الخاص بك بنجاح.',
     message2: 'يمكنك الآن الوصول إلى مساحة العميل والاستمتاع بجميع خدماتنا المصرفية المبتكرة.',
     message3: 'إليك بعض المعلومات المهمة حول حسابك:',
     accountCreated: 'تم إنشاء حسابك بنجاح',
@@ -199,7 +199,7 @@ const WELCOME_EMAIL_TRANSLATIONS: Record<string, Record<string, string>> = {
     support: 'تحتاج إلى مساعدة؟',
     supportDesc: 'فريقنا هنا لمساعدتك. لا تتردد في الاتصال بنا إذا كان لديك أي أسئلة.',
     footer: 'مع أطيب التحيات،',
-    footerTeam: 'فريق NovaBank',
+    footerTeam: 'فريق Azur Bank',
     footerNote: 'تم إرسال هذا البريد الإلكتروني تلقائياً. يرجى عدم الرد على هذا البريد الإلكتروني.'
   }
 };
@@ -271,7 +271,7 @@ export default async function handler(
 
     // Email content with beautiful HTML template
     const mailOptions = {
-      from: `NovaBank <${fromEmail}>`,
+      from: `Azur Bank <${fromEmail}>`,
       to: email,
       subject: t.subject,
       html: `
@@ -289,7 +289,7 @@ export default async function handler(
                 <table role="presentation" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                   <!-- Header -->
                   <tr>
-                    <td style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 40px 30px; text-align: center;">
+                    <td style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); padding: 40px 30px; text-align: center;">
                       <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold;">${t.title}</h1>
                     </td>
                   </tr>
@@ -310,8 +310,8 @@ export default async function handler(
                       </p>
                       
                       <!-- Account Created Box -->
-                      <div style="background-color: #ecfdf5; border-left: 4px solid #10b981; padding: 20px; border-radius: 8px; margin: 30px 0;">
-                        <p style="margin: 0; color: #065f46; font-size: 16px; font-weight: 600;">
+                      <div style="background-color: #ecfdf5; border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; margin: 30px 0;">
+                        <p style="margin: 0; color: #1e3a8a; font-size: 16px; font-weight: 600;">
                           ✓ ${t.accountCreated}
                         </p>
                       </div>
@@ -324,7 +324,7 @@ export default async function handler(
                         <p style="margin: 0 0 25px 0; color: #4b5563; font-size: 16px; line-height: 1.6;">
                           ${t.nextStepsDesc}
                         </p>
-                        <a href="https://novabank.company" style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px;">
+                        <a href="https://novabank.company" style="display: inline-block; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px;">
                           ${t.loginButton}
                         </a>
                       </div>
@@ -353,7 +353,7 @@ export default async function handler(
                         ${t.footerNote}
                       </p>
                       <p style="margin: 10px 0 0 0; color: #9ca3af; font-size: 12px;">
-                        NovaBank - Votre banque de demain
+                        Azur Bank - Votre banque de demain
                       </p>
                     </td>
                   </tr>

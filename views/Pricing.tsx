@@ -52,10 +52,10 @@ const Pricing: React.FC = () => {
              {/* Free */}
              <div className="glass-panel p-8 rounded-2xl border-t-4 border-gray-500 hover:-translate-y-2 transition-transform duration-300">
                <h3 className="text-2xl font-bold text-white mb-2">{t('pricing.std')}</h3>
-               <div className="text-4xl font-bold text-emerald-400 mb-6">0 {CURRENCY}<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
+               <div className="text-4xl font-bold text-blue-400 mb-6">0 {CURRENCY}<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
                <p className="text-gray-400 text-sm mb-6">{t('pricing.std.desc')}</p>
                <div className="mb-6 p-3 bg-slate-800 rounded-lg border border-slate-700">
-                  <span className="text-emerald-400 font-bold">0.5%</span> <span className="text-gray-400 text-sm">{t('pricing.interestRate')}</span>
+                  <span className="text-blue-400 font-bold">0.5%</span> <span className="text-gray-400 text-sm">{t('pricing.interestRate')}</span>
                </div>
                <ul className="space-y-4 text-gray-300 mb-8">
                  <li className="flex items-center gap-2">✓ {t('pricing.std.feature1')}</li>
@@ -69,13 +69,13 @@ const Pricing: React.FC = () => {
              </div>
              
              {/* Premium */}
-             <div className="glass-panel p-8 rounded-2xl border-t-4 border-emerald-500 relative transform md:-translate-y-4 hover:-translate-y-6 transition-transform duration-300 z-10 shadow-2xl shadow-emerald-500/10">
-               <div className="absolute top-0 right-0 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">{t('pricing.popular')}</div>
+             <div className="glass-panel p-8 rounded-2xl border-t-4 border-blue-500 relative transform md:-translate-y-4 hover:-translate-y-6 transition-transform duration-300 z-10 shadow-2xl shadow-blue-500/10">
+               <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">{t('pricing.popular')}</div>
                <h3 className="text-2xl font-bold text-white mb-2">{t('pricing.prem')}</h3>
-               <div className="text-4xl font-bold text-emerald-400 mb-6">9.99 {CURRENCY}<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
+               <div className="text-4xl font-bold text-blue-400 mb-6">9.99 {CURRENCY}<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
                <p className="text-gray-400 text-sm mb-6">{t('pricing.prem.desc')}</p>
-               <div className="mb-6 p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/30">
-                  <span className="text-emerald-400 font-bold">2.0%</span> <span className="text-gray-400 text-sm">{t('pricing.interestRate')}</span>
+               <div className="mb-6 p-3 bg-blue-500/10 rounded-lg border border-blue-500/30">
+                  <span className="text-blue-400 font-bold">2.0%</span> <span className="text-gray-400 text-sm">{t('pricing.interestRate')}</span>
                </div>
                <ul className="space-y-4 text-gray-300 mb-8">
                  <li className="flex items-center gap-2 text-white">✓ {t('pricing.prem.feature1')}</li>
@@ -85,13 +85,13 @@ const Pricing: React.FC = () => {
                  <li className="flex items-center gap-2 text-white">✓ {t('pricing.prem.feature6')}</li>
                  <li className="flex items-center gap-2 text-gray-600">✕ {t('pricing.prem.feature7')}</li>
                </ul>
-               <button onClick={() => setView('REGISTER')} className="w-full py-3 rounded-xl bg-emerald-500 text-white font-bold hover:bg-emerald-600 transition-all shadow-lg shadow-emerald-500/20">{t('pricing.choosePrem')}</button>
+               <button onClick={() => setView('REGISTER')} className="w-full py-3 rounded-xl bg-blue-500 text-white font-bold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20">{t('pricing.choosePrem')}</button>
              </div>
              
              {/* Metal */}
              <div className="glass-panel p-8 rounded-2xl border-t-4 border-yellow-500 hover:-translate-y-2 transition-transform duration-300">
                <h3 className="text-2xl font-bold text-white mb-2">{t('pricing.elite')}</h3>
-               <div className="text-4xl font-bold text-emerald-400 mb-6">16.99 {CURRENCY}<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
+               <div className="text-4xl font-bold text-blue-400 mb-6">16.99 {CURRENCY}<span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></div>
                <p className="text-gray-400 text-sm mb-6">{t('pricing.elite.desc')}</p>
                <div className="mb-6 p-3 bg-yellow-500/10 rounded-lg border border-yellow-500/30">
                   <span className="text-yellow-400 font-bold">4.0%</span> <span className="text-gray-400 text-sm">{t('pricing.interestRate')}</span>
@@ -114,7 +114,7 @@ const Pricing: React.FC = () => {
       <section className="py-24 px-4 bg-slate-800/50">
         <div className="max-w-5xl mx-auto">
            <div className="flex items-center justify-center gap-3 mb-10">
-              <Calculator className="h-8 w-8 text-emerald-400" />
+              <Calculator className="h-8 w-8 text-blue-400" />
               <h2 className="text-3xl font-bold text-white">{t('pricing.simulator.title')}</h2>
            </div>
 
@@ -123,7 +123,7 @@ const Pricing: React.FC = () => {
                  <div>
                     <label className="flex justify-between text-gray-300 font-medium mb-4">
                        <span>{t('pricing.simulator.initialDeposit')}</span>
-                       <span className="text-emerald-400 font-bold">{formatMoney(deposit)}</span>
+                       <span className="text-blue-400 font-bold">{formatMoney(deposit)}</span>
                     </label>
                     <input 
                       type="range" 
@@ -132,14 +132,14 @@ const Pricing: React.FC = () => {
                       step="100" 
                       value={deposit}
                       onChange={(e) => setDeposit(Number(e.target.value))}
-                      className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                      className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500"
                     />
                  </div>
 
                  <div>
                     <label className="flex justify-between text-gray-300 font-medium mb-4">
                        <span>{t('pricing.simulator.duration')}</span>
-                       <span className="text-emerald-400 font-bold">{years} {t('pricing.simulator.years')}</span>
+                       <span className="text-blue-400 font-bold">{years} {t('pricing.simulator.years')}</span>
                     </label>
                     <input 
                       type="range" 
@@ -148,7 +148,7 @@ const Pricing: React.FC = () => {
                       step="1" 
                       value={years}
                       onChange={(e) => setYears(Number(e.target.value))}
-                      className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                      className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500"
                     />
                  </div>
 
@@ -171,19 +171,19 @@ const Pricing: React.FC = () => {
                        <div className="text-gray-400 text-sm">{t('pricing.simulator.accountStd')}</div>
                        <div className="text-white font-bold text-xl">{formatMoney(results.standard)}</div>
                     </div>
-                    <div className="text-right text-emerald-400 text-sm">
+                    <div className="text-right text-blue-400 text-sm">
                        +{formatMoney(results.standard - deposit)}
                     </div>
                  </div>
 
                  {/* Premium Result */}
-                 <div className="bg-slate-800 p-4 rounded-xl border border-emerald-500/30 flex justify-between items-center relative overflow-hidden">
-                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500"></div>
+                 <div className="bg-slate-800 p-4 rounded-xl border border-blue-500/30 flex justify-between items-center relative overflow-hidden">
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-500"></div>
                     <div>
                        <div className="text-gray-300 text-sm">{t('pricing.simulator.accountPrem')}</div>
                        <div className="text-white font-bold text-xl">{formatMoney(results.premium)}</div>
                     </div>
-                    <div className="text-right text-emerald-400 text-sm font-bold">
+                    <div className="text-right text-blue-400 text-sm font-bold">
                        +{formatMoney(results.premium - deposit)}
                     </div>
                  </div>
@@ -202,7 +202,7 @@ const Pricing: React.FC = () => {
                  </div>
 
                  <div className="mt-6 text-center">
-                    <button onClick={() => setView('REGISTER')} className="text-emerald-400 hover:text-emerald-300 underline font-medium">
+                    <button onClick={() => setView('REGISTER')} className="text-blue-400 hover:text-blue-300 underline font-medium">
                        {t('pricing.simulator.startSaving')}
                     </button>
                  </div>
