@@ -46,9 +46,9 @@ export default async function handler(
     // Get SMTP configuration from environment variables
     const smtpSecure = (process.env.SMTP_SECURE || process.env.VERCEL_ENV_SMTP_SECURE) === 'true' || smtpPort === 465;
     const smtpUser = process.env.SMTP_USER || process.env.VERCEL_ENV_SMTP_USER || process.env.SMTP_EMAIL || process.env.VERCEL_ENV_SMTP_EMAIL;
-    const smtpPassword = process.env.SMTP_PASSWORD || process.env.VERCEL_ENV_SMTP_PASSWORD;
-    const recipientEmail = process.env.CONTACT_EMAIL || process.env.VERCEL_ENV_CONTACT_EMAIL || 'contact@novabank.company';
-    const fromEmail = process.env.FROM_EMAIL || process.env.VERCEL_ENV_FROM_EMAIL || smtpUser || 'contact@novabank.company';
+    const smtpPassword = process.env.SMTP_PASS || process.env.VERCEL_ENV_SMTP_PASS || process.env.SMTP_PASSWORD || process.env.VERCEL_ENV_SMTP_PASSWORD;
+    const recipientEmail = process.env.CONTACT_EMAIL || process.env.VERCEL_ENV_CONTACT_EMAIL || 'contact@azurbank.company';
+    const fromEmail = process.env.FROM_EMAIL || process.env.VERCEL_ENV_FROM_EMAIL || smtpUser || 'contact@azurbank.company';
 
     // Debug: Log which variables are missing (without exposing values)
     if (!smtpUser || !smtpPassword) {
