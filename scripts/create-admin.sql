@@ -4,8 +4,8 @@
 -- Instructions:
 -- 1. Allez dans Supabase Dashboard > Authentication > Users
 -- 2. Cliquez sur "Add user" > "Create new user"
--- 3. Email: admin@novabank.com
--- 4. Password: 012345678
+-- 3. Email: admin@azurbank.company
+-- 4. Password: 0123456789
 -- 5. Désactivez "Auto Confirm User" si nécessaire, puis confirmez manuellement
 -- 6. Copiez l'UUID de l'utilisateur créé
 -- 7. Remplacez 'USER_UUID_HERE' dans ce script par l'UUID de l'utilisateur
@@ -20,11 +20,11 @@ BEGIN
     -- Trouver l'utilisateur par email dans auth.users
     SELECT id INTO admin_user_id
     FROM auth.users
-    WHERE email = 'admin@novabank.com'
+    WHERE email = 'admin@azurbank.company'
     LIMIT 1;
 
     IF admin_user_id IS NULL THEN
-        RAISE EXCEPTION 'Utilisateur admin@novabank.com non trouvé dans auth.users. Créez-le d''abord dans Authentication > Users';
+        RAISE EXCEPTION 'Utilisateur admin@azurbank.company non trouvé dans auth.users. Créez-le d''abord dans Authentication > Users';
     END IF;
 
     -- Vérifier si le profil existe déjà
@@ -34,7 +34,7 @@ BEGIN
         SET 
             role = 'ADMIN',
             name = 'Super Administrator',
-            email = 'admin@novabank.com',
+            email = 'admin@azurbank.company',
             balance = '999999999'
         WHERE id = admin_user_id;
         
@@ -63,7 +63,7 @@ BEGIN
         ) VALUES (
             admin_user_id,
             'Super Administrator',
-            'admin@novabank.com',
+            'admin@azurbank.company',
             'ADMIN',
             '999999999',
             'https://picsum.photos/200/200',
