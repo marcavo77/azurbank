@@ -229,10 +229,10 @@ const LandingPage: React.FC = () => {
                 </div>
 
                 {/* DIGITALLY BRANDED T-SHIRT EFFECT - Man on the right */}
-                {/* We overlay the NovaBank logo on the person's chest area */}
+                {/* We overlay the Azur Bank logo on the person's chest area */}
                 <div className="absolute top-[45%] right-[25%] transform -translate-y-1/2 w-20 flex flex-col items-center opacity-90 rotate-[-5deg] mix-blend-hard-light filter brightness-110">
                     <ShieldCheck className="text-blue-400 h-8 w-8 drop-shadow-md" strokeWidth={2.5} />
-                    <span className="text-white font-bold text-[10px] tracking-widest drop-shadow-md mt-1 font-sans">NOVABANK</span>
+                    <span className="text-white font-bold text-[10px] tracking-widest drop-shadow-md mt-1 font-sans">AZUR BANK</span>
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-8">

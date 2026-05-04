@@ -99,9 +99,9 @@ export default async function handler(
 
     // Email content
     const mailOptions = {
-      from: `NovaBank Contact Form <${fromEmail}>`,
+      from: `Azur Bank Contact Form <${fromEmail}>`,
       to: recipientEmail,
-      replyTo: email,
+      replyTo: `${safeFirstName} ${safeLastName} <${safeEmail}>`,
       subject: `Nouveau message de contact - ${safeFirstName} ${safeLastName} (${safeEmail})`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -121,13 +121,13 @@ export default async function handler(
           </div>
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 12px;">
-            <p>Ce message a été envoyé depuis le formulaire de contact de NovaBank.</p>
+            <p>Ce message a été envoyé depuis le formulaire de contact d'Azur Bank.</p>
             <p>Vous pouvez répondre directement à cet email pour répondre à ${safeFirstName} ${safeLastName}.</p>
           </div>
         </div>
       `,
       text: `
-Nouveau message depuis le formulaire de contact NovaBank
+Nouveau message depuis le formulaire de contact Azur Bank
 
 Prénom: ${firstName}
 Nom: ${lastName}
@@ -137,7 +137,7 @@ Message:
 ${message}
 
 ---
-Ce message a été envoyé depuis le formulaire de contact de NovaBank.
+Ce message a été envoyé depuis le formulaire de contact d'Azur Bank.
 Vous pouvez répondre directement à cet email pour répondre à ${firstName} ${lastName}.
       `.trim(),
     };
