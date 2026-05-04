@@ -22,12 +22,16 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Declare SMTP vars outside try block so they're accessible in catch block
+  const smtpHost = process.env.SMTP_HOST || process.env.VERCEL_ENV_SMTP_HOST || 'smtp.zoho.com';
+  const smtpPort = parseInt(process.env.SMTP_PORT || process.env.VERCEL_ENV_SMTP_PORT || '587');
+
   try {
     const { firstName, lastName, email, message } = req.body;
 
     // Validate required fields
     if (!firstName || !lastName || !email || !message) {
-      return res.status(400).json({ 
+      return res.status(400).json({
         error: 'Missing required fields',
         required: ['firstName', 'lastName', 'email', 'message']
       });
@@ -40,9 +44,6 @@ export default async function handler(
     }
 
     // Get SMTP configuration from environment variables
-    // Try both direct access and Vercel-specific patterns
-    const smtpHost = process.env.SMTP_HOST || process.env.VERCEL_ENV_SMTP_HOST || 'smtp.zoho.com';
-    const smtpPort = parseInt(process.env.SMTP_PORT || process.env.VERCEL_ENV_SMTP_PORT || '587');
     const smtpSecure = (process.env.SMTP_SECURE || process.env.VERCEL_ENV_SMTP_SECURE) === 'true' || smtpPort === 465;
     const smtpUser = process.env.SMTP_USER || process.env.VERCEL_ENV_SMTP_USER || process.env.SMTP_EMAIL || process.env.VERCEL_ENV_SMTP_EMAIL;
     const smtpPassword = process.env.SMTP_PASSWORD || process.env.VERCEL_ENV_SMTP_PASSWORD;
