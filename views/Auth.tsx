@@ -111,7 +111,6 @@ export const Auth: React.FC = () => {
       await register(formData);
     } catch (err: any) {
       setError(err.message || t('auth.register.error.generic'));
-    } finally {
       setIsRegistering(false);
     }
   };
